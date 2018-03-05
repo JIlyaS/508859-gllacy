@@ -8,7 +8,7 @@
 <body>
   <header class="header">
 	  <nav class="nav">
-	  	<a class="logo" href="#"><img class="logo-img" src="http://placehold.it/150x100" alt=""></a>
+	  	<a class="logo" href="#"><img class="logo-img" src="http://placehold.it/150x100" alt="Логотип"></a>
 	  	<ul class="nav-items">
 	  	  <li class="nav-item nav-item-current"><a href="#">Каталог</a></li>	
 	  	  <li class="nav-item"><a href="#">Доставка и оплата</a></li>	
@@ -16,13 +16,11 @@
 	  	</ul>
 	  	<!-- Меню каталога -->
 	  	<div class="menu-catalog visibility-hidden">
-	  	  <ul class="menu-items">
-	  	  	<li class="menu-item">Новинки</li>
-	  	  	<li class="menu-item">Сливочное</li>
-	  	  	<li class="menu-item">Щербеты</li>
-	  	  	<li class="menu-item">Фруктовый лед</li>
-	  	  	<li class="menu-item">Мелорин</li>
-	  	  </ul>
+	  	  <a class="menu-item" href="#">Новинки</a>
+	  	  <a class="menu-item" href="#">Сливочное</a>
+	  	  <a class="menu-item" href="#">Щербеты</a>
+	  	  <a class="menu-item" href="#">Фруктовый лед</a>
+	  	  <a class="menu-item" href="#">Мелорин</a>
 	  	</div>
 	  	<div class="header-block">
 	  	  <ul class="user-elements">
@@ -49,27 +47,29 @@
 	  	</div>
 	  	<!-- Корзина с двумя товарами -->
 	  	<div class="modal-basket">
-	  	  <table class="modal-product-items">
-	  	  	<tr>
-	  	  	  <td><i class="modal-cross"></i></td>
-	  	  	  <td><img class="modal-img-ice" src="#" width="50" height="50" alt="Мороженное"></td>
-	  	  	  <td><h3>Пломбир с апельсиновым джемом</h3></td>
-	  	  	  <td><span class="">1,5 кг x </span><span class="">200 руб.</span></td>
-	  	  	  <td><b class="modal-price-item">300 руб.</b></td>
-	  	  	</tr>	
-	  	  	<tr>
-	  	  	  <td><i class="modal-cross"></i></td>
-	  	  	  <td><img class="modal-img-ice" src="#" width="50" height="50" alt="Мороженное"></td>
-	  	  	  <td><h3>Клубничный пломбир с присыпкой из белого шоколада</h3></td>
-	  	  	  <td><span class="">1,5 кг x </span><span class="">300 руб.</span></td>
-	  	  	  <td><b class="modal-price-item">450 руб.</b></td>
-	  	  	</tr>	
-		  </table>
+	  	  <div class="modal-product-items">
+	  	  	<div class="modal-product-item">
+	  	  	  <span class="modal-block1"><i class="modal-cross"></i></span>
+	  	  	  <span class="modal-block2"><img class="modal-img-ice" src="#" width="50" height="50" alt="Мороженное"></span>
+	  	  	  <span class="modal-block3"><span class="modal-title">Пломбир с апельсиновым джемом</span></span>
+	  	  	  <span class="modal-block4"><span class="modal-weight">1,5 кг x </span><span class="modal-price">200 руб.</span></span>
+	  	  	  <span class="modal-block5"><b class="modal-price-item">300 руб.</b></span>
+	  	  	</div>	
+	  	  	<div class="modal-product-item">
+	  	  	  <span class="modal-block1"><i class="modal-cross"></i></span>
+	  	  	  <span class="modal-block2"><img class="modal-img-ice" src="#" width="50" height="50" alt="Мороженное"></span>
+	  	  	  <span class="modal-block3"><span class="modal-title">Клубничный пломбир с присыпкой из белого шоколада</span></span>
+	  	  	  <span class="modal-block4"><span class="modal-weight">1,5 кг x </span><span class="modal-price">300 руб.</span></span>
+	  	  	  <span class="modal-block5"><span class="modal-price-item">450 руб.</span></span>
+	  	  	</div>	
+		    </div>
 		  <hr class="modal-hr">
 		  <b class="modal-price">Итого: 750 руб.</b>
 		  <a class="modal-order-btn" href="#">Оформить заказ</a>
 	  	</div>
 	  </nav>
+  </header>
+  <section class="main-form">
 	  <div class="breadcrumbs">
 	  	<ul class="breadcrumbs-items">
 	  	  <li class="breadcrumbs-item">Главная</li>
@@ -79,13 +79,13 @@
 	  </div>
 	  <h1 class="main-icecream">Сливочное мороженое</h1>
 	  <form class="sorted-menu" action="#" method="post">
-	  	<b  class="menu-sort-label">Сортировка:</b>
-	  	<select class="menu-sort-items">
+	  	<label class="menu-sort-label" for="menu-sort-items">Сортировка:</label>
+	  	<select class="menu-sort-items" id="menu-sort-items">
 	      <option class="menu-sort-item" value="popularity" selected>по популярности</option>
 	      <option class="menu-sort-item" value="name">по названию</option>
 	      <option class="menu-sort-item" value="price">по цене</option>
 	  	</select>
-	  	<b  class="menu-range-label">Цена: 100 руб. - 500 руб.</b>
+	  	<label class="menu-range-label">Цена: 100 руб. - 500 руб.</label>
 	  	<input class="menu-range" type="range" min="0" max="800" step="50">
 	  	<b class="menu-radio-label">Жирность:</b>
 	  	<div class="menu-radio-items">
@@ -113,100 +113,100 @@
 	  	</div>
 	  	<button class="menu-form-btn" type="submit">Применить</button>
 	  </form>
-  	</header>
+  </section>	
 	<main class="main-container">
 	  <ul class="buy-elements">
   		<li>
   		  <img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое"> 
   		  <span class="cost">310 Р/кг</span>
-  		  <h3 class="icecream-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+  		  <h2 class="icecream-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
   		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
   		</li>
   		<li>
   		  <img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое">
   		  <span class="cost">380 Р/кг</span>
-  		  <h3 class="icecream-title">Сливочно-кофейное с кусочками шоколада</h3>
+  		  <h2 class="icecream-title">Сливочно-кофейное с кусочками шоколада</h2>
   		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
   		</li>
   		<li>
   		  <img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое">
   		  <span class="cost">355 Р/кг</span>
-  		  <h3 class="icecream-title">Сливочно-клубничное с посыпкой из белого шоколада</h3>
+  		  <h2 class="icecream-title">Сливочно-клубничное с посыпкой из белого шоколада</h2>
   		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
   		</li>
   		<li>
-  		<img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое">
+  		  <img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое">
   		  <span class="cost">415 Р/кг</span>
-  		  <h3 class="icecream-title">Сливочное крем-брюле с карамельной подливкой</h3>
+  		  <h2 class="icecream-title">Сливочное крем-брюле с карамельной подливкой</h2>
   		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
   		</li>
   		<!-- Вторая строка -->
   		<li>
   		  <img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое"> 
   		  <span class="cost">325 Р/кг</span>
-  		  <h3 class="icecream-title">Сливочное с брусничным джемом</h3>
+  		  <h2 class="icecream-title">Сливочное с брусничным джемом</h2>
   		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
   		 </li>
   		 <li>
   		  <img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое">
   		  <span class="cost">410 Р/кг</span>
-  		  <h3 class="icecream-title">Сливочно-черничное с цельными ягодами черники</h3>
+  		  <h2 class="icecream-title">Сливочно-черничное с цельными ягодами черники</h2>
   		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
   		</li>
   		<li>
   		  <img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое">
   		  <span class="cost">375 Р/кг</span>
-  		  <h3 class="icecream-title">Сливочно-лимонное с карамельной присыпкой</h3>
+  		  <h2 class="icecream-title">Сливочно-лимонное с карамельной присыпкой</h2>
   		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
   		</li>
   		<li>
-  		<img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое">
+  		  <img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое">
   		  <span class="cost">320 Р/кг</span>
-  		  <h3 class="icecream-title">Сливочное с шоколадной стружкой</h3>
+  		  <h2 class="icecream-title">Сливочное с шоколадной стружкой</h2>
   		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
   		</li>
   		<!-- Третья строка -->
   		<li>
   		  <img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое"> 
   		  <span class="cost">440 Р/кг</span>
-  		  <h3 class="icecream-title">Сливочно-ванильное с кусочками шоколада</h3>
+  		  <h2 class="icecream-title">Сливочно-ванильное с кусочками шоколада</h2>
   		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
   		</li>
   		<li>
   		  <img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое">
   		  <span class="cost">435 Р/кг</span>
-  		  <h3 class="icecream-title">Сливочное с ментоловым сиропом</h3>
+  		  <h2 class="icecream-title">Сливочное с ментоловым сиропом</h2>
   		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
   		</li>
   		<li>
   		  <img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое">
   		  <span class="cost">355 Р/кг</span>
-  		  <h3 class="icecream-title">Сливочное с кусочками черного шоколада</h3>
+  		  <h2 class="icecream-title">Сливочное с кусочками черного шоколада</h2>
   		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
   		</li>
   		<li>
-  		<img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое">
+  		  <img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое">
   		  <span class="cost">420 Р/кг</span>
-  		  <h3 class="icecream-title">Сливочное с мятным сиропом</h3>
+  		  <h2 class="icecream-title">Сливочное с мятным сиропом</h2>
   		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
   		</li>
-  	  </ul>
+  	</ul>
   	  <ul class="pagination-items">
-  	  	<li class="pagination-item"><a href="#"><i class="arrow-left visibility-hidden"></i></a></li>
+  	  	<li class="pagination-item"><a href="#" class="arrow-left visibility-hidden"></a></li>
         <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
         <li class="pagination-item"><a href="#">2</a></li>
         <li class="pagination-item"><a href="#">3</a></li>
         <li class="pagination-item"><a href="#">4</a></li>
         <li class="pagination-item"><a href="#">5</a></li>
-        <li class="pagination-item"><a href="#"><i class="arrow-right"></i></a></li>
+        <li class="pagination-item"><a href="#" class="arrow-right"></a></li>
       </ul>
 	</main>
   	<footer class="footer">
   	  <div class="socials">
-  	  	<a class="twitter-link" href="#"><i class="twitter"></i></a>
-  	  	<a class="instagram-link" href="#"><i class="instagram"></i></a>
-  	  	<a class="facebook-link" href="#"><i class="facebook"></i></a>
-  	  	<a class="vk-link" href="#"><i class="vk"></i></a>
+  	  	<a class="twitter-link" href="#"></a>
+  	  	<a class="instagram-link" href="#"></a>
+  	  	<a class="facebook-link" href="#"></a>
+  	  	<a class="vk-link" href="#"></a>
   	  </div>
   	  <nav class="nav-footer">
   	    <ul class="nav-footer-items">
@@ -217,7 +217,6 @@
   	  	</ul>
   	  </nav>
   	  <a class="htmlacademy" href="#">
-  	  	<i class="html-icon"></i>
   	  	<b class="html-title">html academy</b>
   	  </a> 
   	  <span class="made">Сделано в <a class="htmlacademy-link">HTML Academy</a> 2017</span>
