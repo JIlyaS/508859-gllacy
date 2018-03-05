@@ -3,10 +3,173 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="#">
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>
-
+  	<header class="header">
+	  <nav class="nav">
+	  	<a class="logo" href="#"><img class="logo-img" src="http://placehold.it/150x100" alt=""></a>
+	  	<ul class="nav-items">
+	  	  <li class="nav-item"><a href="#">Каталог</a></li>	
+	  	  <li class="nav-item"><a href="#">Доставка и оплата</a></li>	
+	  	  <li class="nav-item"><a href="#">О Компании</a></li>	
+	  	</ul>
+	  	<!-- Меню каталога -->
+	  	<div class="menu-catalog visibility-hidden">
+	  	  <ul class="menu-items">
+	  	  	<li class="menu-item1">Новинки</li>
+	  	  	<li class="menu-item2">Сливочное</li>
+	  	  	<li class="menu-item3">Щербеты</li>
+	  	  	<li class="menu-item4">Фруктовый лед</li>
+	  	  	<li class="menu-item5">Мелорин</li>
+	  	  </ul>
+	  	</div>
+	  	<div class="header-block">
+	  	  <ul class="user-elements">
+	  	  	<li><button class="search"><i class="search-icon"></i></button></li>
+	  	  	<li><button class="signin"><i class="signin-icon"></i>Вход</button></li>
+	  	  	<li><button class="basket"><i class="basket-icon"></i>Пусто</button></li>
+	  	  </ul>
+	  	  <span class="work-hours">С 10 до 20, ежедневно</span>
+	  	  <span class="work-phone">8 812 450-25-25</span>
+	  	</div>
+	  	<!-- Поиск -->
+	  	<div class="modal-search">
+	  	  <input class="modal-input" type="text" name="search-icecream" placeholder="Что ищем?">
+	  	</div>
+	  	<!-- Авторизация и регистрация -->
+	  	<div class="modal-signup">
+	  	  <form action="#" method="post">
+	  	    <input class="modal-email" type="text" name="modal-email" placeholder="Электронная почта">
+	  	    <input class="modal-passowrd" type="password" name="modal-password" placeholder="Пароль">
+	  	    <button class="modal-submit" type="submit" name="submit-btn">Войти</button>
+	  	    <a class="modal-forgot-pass" href="#">Забыли пароль?</a>
+	  	    <a class="modal-registration" href="#">Новая регистрация</a>
+	  	  </form>
+	  	</div>
+	  	<!-- Пустая корзина -->
+	  </nav>
+	  <div class="slider">
+	  	<b class="slider-title">Крем-брюле и пламбир с малиновым джемом</b>
+	  	<a class="slider-btn" href="#">Давайте оба!</a>
+	  	<span class="slider-next"></span>
+	  	<span class="slider-next"></span>
+	  	<span class="slider-next"></span>
+	  </div>
+  	</header>
+  	<main class="main">
+  	  <section class="choise-ice">
+  	  	<h2 class="visibility-hidden">Наши акции</h2>
+  	  	<div class="choise-elements">
+  	  	  <b class="raspberry-title">Малинка даром!</b>
+  	  	  <p class="raspberry-paragraph">
+  	  	  	При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.
+  	  	  </p>
+  	  	  <a class="raspberry-btn" href="#">Хочу варенья!</a>
+  	  	</div>
+  	  	<div class="choise-elements">
+  	  	  <b class="chocolate-title">Шоколад даром!</b>
+  	  	  <p class="chocolate-paragraph">
+  	  	  	При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной поыпки совершенно бесплатно.
+  	  	  </p>
+  	  	  <a class="chocolate-btn" href="#">Хочу шоколадки!</a>
+  	  	</div>
+  	  </section>
+  	  <section class="buy-icecream">
+  	  	<ul class="buy-elements">
+  		  <li>
+  		  	<img class="icecream-img" src="http://placehold.it/150x100" alt=""> 
+  		  	<span class="cost">310 Р/кг</span>
+  		  	<h3 class="icecream-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+  		  	<a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+  		  </li>
+  		  <li>
+  		  	<img class="icecream-img" src="http://placehold.it/150x100" alt="">
+  		  	<span class="cost">380 Р/кг</span>
+  		  	<h3 class="icecream-title">Сливочно-кофейное с кусочками шоколада</h3>
+  		  	<a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+  		  </li>
+  		  <li>
+  		    <img class="icecream-img" src="http://placehold.it/150x100" alt="">
+  		    <span class="cost">355 Р/кг</span>
+  		  	<h3 class="icecream-title">Сливочно-клубничное с посыпкой из белого шоколада</h3>
+  		  	<a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+  		  </li>
+  		  <li>
+  			<img class="icecream-img" src="http://placehold.it/150x100" alt="">
+  			<span class="cost">415 Р/кг</span>
+  		  	<h3 class="icecream-title">Сливочное крем-брюле с карамельной подливкой</h3>
+  		  	<a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+  		  </li>
+  	  	 </ul>
+  	  </section>
+  	  <section class="aboutus">
+  	   	<h2 class="aboutus-title">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес</h2>
+		<p class="advantages">
+		  Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий. 	
+		</p>
+		<p class="advantages">
+		  Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.	
+		</p>
+		<p class="advantages">
+		  Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.	
+		</p>
+		<p class="advantages">
+		  Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.	
+		</p>
+  	  </section>
+  	  <section class="blocks">
+  	  	<h2 class="visibility-hidden">Блог</h2>
+  	    <article class="new-laying">
+  	      <h3 class="new">Новое в нашем блоге</h3>	
+  	      <a class="new-link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+  	    </article>
+  	    <section class="subscription">
+  	      <h2 class="visibility-hidden">Подписка</h2>
+  	      <p class="substraction-paragraph">
+  	      	Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
+  	      </p>
+  	      <form action="#" method="post">
+  	      	<input type="text" class="email" name="email"  placeholder="Электронная почта">
+  	      	<button type="submit" class="send">Отправить</button>
+  	      </form>
+  	    </section>
+  	  </section>
+  	  <section class="card">
+  	  	<h2 class="visibility-hidden">Карта</h2>
+  	  	<div class="feedback">
+  	  	  <p class="address-block">
+  	  	  	Адрес главного офиса и офлайн-магазина:
+  	  	  	<b class="address">ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+  	  	  	Для заказов по телефону:
+  	  	  	<b class="number">8 812 450-25-25</b>
+  	  	  	(с 10 до 20 ежедневно)
+  	  	  </p>
+  	  	  <a class="feedback-btn" href="#">Форма обратной связи</a>
+  	  	</div>
+  	  </section>
+  	</main>
+  	<footer class="footer">
+  	  <div class="socials">
+  	  	<a class="twitter-link" href="#"><i class="twitter"></i></a>
+  	  	<a class="instagram-link" href="#"><i class="instagram"></i></a>
+  	  	<a class="facebook-link" href="#"><i class="facebook"></i></a>
+  	  	<a class="vk-link" href="#"><i class="vk"></i></a>
+  	  </div>
+  	  <nav class="nav-footer">
+  	    <ul class="nav-footer-items">
+  	  	  <li class="nav-footer-item">Для поставщиков</li>
+  	  	  <li class="nav-footer-item">Наши документы</li>
+  	  	  <li class="nav-footer-item">О производстве</li>
+  	  	  <li class="nav-footer-item">Экологические стандарты</li>
+  	  	</ul>
+  	  </nav>
+  	  <a class="htmlacademy" href="">
+  	  	<i class="html-icon"></i>
+  	  	<b class="html-title">html academy</b>
+  	  </a> 
+  	  <span class="made">Сделано в <a class="htmlacademy-link">HTML Academy</a> 2017</span>
+  	</footer>
+	<script src="#"></script>
   </body>
 </html>
