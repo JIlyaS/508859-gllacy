@@ -10,18 +10,22 @@
 	  <nav class="nav">
 	  	<a class="logo" href="#"><img class="logo-img" src="http://placehold.it/150x100" alt="Логотип"></a>
 	  	<ul class="nav-items">
-	  	  <li class="nav-item nav-item-current"><a href="#">Каталог</a></li>	
+	  	  <li class="nav-item nav-item-current">
+	  	  	<a href="#">Каталог</a>
+	  	  	<!-- Меню каталога -->
+	  		<div class="menu-catalog visibility-hidden">
+	  		  <ul class="menu-items">
+	  	  	    <li class="menu-item"><a href="#">Новинки</a></li>
+	  	        <li class="menu-item"><a href="#">Сливочное</a></li>
+	  	        <li class="menu-item"><a href="#">Щербеты</a></li>
+	  	        <li class="menu-item"><a href="#">Фруктовый лед</a></li>
+	  	        <li class="menu-item"><a href="#">Мелорин</a></li>
+	  	      </ul>
+	  	    </div>
+	  	  </li>	
 	  	  <li class="nav-item"><a href="#">Доставка и оплата</a></li>	
 	  	  <li class="nav-item"><a href="#">О Компании</a></li>	
 	  	</ul>
-	  	<!-- Меню каталога -->
-	  	<div class="menu-catalog visibility-hidden">
-	  	  <a class="menu-item" href="#">Новинки</a>
-	  	  <a class="menu-item" href="#">Сливочное</a>
-	  	  <a class="menu-item" href="#">Щербеты</a>
-	  	  <a class="menu-item" href="#">Фруктовый лед</a>
-	  	  <a class="menu-item" href="#">Мелорин</a>
-	  	</div>
 	  	<div class="header-block">
 	  	  <ul class="user-elements">
 	  	  	<li><button class="search"><i class="search-icon"></i></button></li>
@@ -49,18 +53,18 @@
 	  	<div class="modal-basket">
 	  	  <div class="modal-product-items">
 	  	  	<div class="modal-product-item">
-	  	  	  <span class="modal-block1"><i class="modal-cross"></i></span>
-	  	  	  <span class="modal-block2"><img class="modal-img-ice" src="#" width="50" height="50" alt="Мороженное"></span>
-	  	  	  <span class="modal-block3"><span class="modal-title">Пломбир с апельсиновым джемом</span></span>
-	  	  	  <span class="modal-block4"><span class="modal-weight">1,5 кг x </span><span class="modal-price">200 руб.</span></span>
-	  	  	  <span class="modal-block5"><b class="modal-price-item">300 руб.</b></span>
+	  	  	  <span class="modal-cross"></span>
+	  	  	  <img class="modal-img-ice" src="#" width="50" height="50" alt="Мороженное">
+	  	  	  <span class="modal-title">Пломбир с апельсиновым джемом</span>
+	  	  	  <span class="modal-weight">1,5 кг x </span><span class="modal-price">200 руб.</span>
+	  	  	  <b class="modal-price-item">300 руб.</b>
 	  	  	</div>	
 	  	  	<div class="modal-product-item">
-	  	  	  <span class="modal-block1"><i class="modal-cross"></i></span>
-	  	  	  <span class="modal-block2"><img class="modal-img-ice" src="#" width="50" height="50" alt="Мороженное"></span>
-	  	  	  <span class="modal-block3"><span class="modal-title">Клубничный пломбир с присыпкой из белого шоколада</span></span>
-	  	  	  <span class="modal-block4"><span class="modal-weight">1,5 кг x </span><span class="modal-price">300 руб.</span></span>
-	  	  	  <span class="modal-block5"><span class="modal-price-item">450 руб.</span></span>
+	  	  	  <span class="modal-cross"></span>
+	  	  	  <img class="modal-img-ice" src="#" width="50" height="50" alt="Мороженное">
+	  	  	  <span class="modal-title">Клубничный пломбир с присыпкой из белого шоколада</span>
+	  	  	  <span class="modal-weight">1,5 кг x </span><span class="modal-price">300 руб.</span>
+	  	  	  <span class="modal-price-item">450 руб.</span>
 	  	  	</div>	
 		    </div>
 		  <hr class="modal-hr">
@@ -69,52 +73,52 @@
 	  	</div>
 	  </nav>
   </header>
-  <section class="main-form">
-	  <div class="breadcrumbs">
-	  	<ul class="breadcrumbs-items">
-	  	  <li class="breadcrumbs-item">Главная</li>
-	  	  <li class="breadcrumbs-item">Каталог</li>
-	  	  <li class="breadcrumbs-item-current">Сливочное</li>
-	  	</ul>
-	  </div>
-	  <h1 class="main-icecream">Сливочное мороженое</h1>
-	  <form class="sorted-menu" action="#" method="post">
-	  	<label class="menu-sort-label" for="menu-sort-items">Сортировка:</label>
-	  	<select class="menu-sort-items" id="menu-sort-items">
-	      <option class="menu-sort-item" value="popularity" selected>по популярности</option>
-	      <option class="menu-sort-item" value="name">по названию</option>
-	      <option class="menu-sort-item" value="price">по цене</option>
-	  	</select>
-	  	<label class="menu-range-label">Цена: 100 руб. - 500 руб.</label>
-	  	<input class="menu-range" type="range" min="0" max="800" step="50">
-	  	<b class="menu-radio-label">Жирность:</b>
-	  	<div class="menu-radio-items">
-	  	  <input class="radio-item" id="radio-item1" type="radio" name="radio-item">
-	  	  <label class="radio-label-item1" for="radio-item1">0%</label>
-	  	  <input class="radio-item" id="radio-item2" type="radio" name="radio-item">
-	  	  <label class="menu-radio-label" for="radio-item2">до 10%</label>
-	  	  <input class="radio-item" id="radio-item3" type="radio" name="radio-item">
-	  	  <label class="menu-radio-label" for="radio-item3">до 30%</label>
-	  	  <input class="radio-item" id="radio-item4" type="radio" name="radio-item">
-	  	  <label class="menu-radio-label" for="radio-item4">выше 30%</label>
-	  	</div>
-	  	<b class="menu-checkbox-label">Наполнители:</b>
-	  	<div class="menu-checkbox-items">
-	  	  <input type="checkbox" class="checkbox-item" id="checkbox-item1" name="checkbox-chocolade">
-	  	  <label for="checkbox-item1" class="checkbox-label-item">шоколадные</label>
-	  	  <input type="checkbox" class="checkbox-item" id="checkbox-item2" name="checkbox-sugar">
-	  	  <label for="checkbox-item2" class="checkbox-label-item">сахарные присыпки</label>
-	      <input type="checkbox" class="checkbox-item" id="checkbox-item3" name="checkbox-fruits">
-	  	  <label for="checkbox-item3" class="checkbox-label-item">фрукты</label>
-	  	  <input type="checkbox" class="checkbox-item" id="checkbox-item4" name="checkbox-syrup">
-	  	  <label for="checkbox-item4" class="checkbox-label-item">сиропы</label>
-	  	  <input type="checkbox" class="checkbox-item" id="checkbox-item5" name="checkbox-jams">
-	  	  <label for="checkbox-item5" class="checkbox-label-item">джемы</label>
-	  	</div>
-	  	<button class="menu-form-btn" type="submit">Применить</button>
-	  </form>
-  </section>	
-	<main class="main-container">
+  <main class="main-container">
+	  <section class="main-form">
+		  <div class="breadcrumbs">
+		  	<ul class="breadcrumbs-items">
+		  	  <li class="breadcrumbs-item">Главная</li>
+		  	  <li class="breadcrumbs-item">Каталог</li>
+		  	  <li class="breadcrumbs-item-current">Сливочное</li>
+		  	</ul>
+		  </div>
+		  <h1 class="main-icecream">Сливочное мороженое</h1>
+		  <form class="sorted-menu" action="#" method="post">
+		  	<label class="menu-sort-label" for="menu-sort-items">Сортировка:</label>
+		  	<select class="menu-sort-items" id="menu-sort-items">
+		      <option class="menu-sort-item" value="popularity" selected>по популярности</option>
+		      <option class="menu-sort-item" value="name">по названию</option>
+		      <option class="menu-sort-item" value="price">по цене</option>
+		  	</select>
+		  	<label class="menu-range-label">Цена: 100 руб. - 500 руб.</label>
+		  	<input class="menu-range" type="range" min="0" max="800" step="50">
+		  	<b class="menu-radio-label">Жирность:</b>
+		  	<div class="menu-radio-items">
+		  	  <input class="radio-item" id="radio-item1" type="radio" name="radio-item">
+		  	  <label class="radio-label-item1" for="radio-item1">0%</label>
+		  	  <input class="radio-item" id="radio-item2" type="radio" name="radio-item">
+		  	  <label class="menu-radio-label" for="radio-item2">до 10%</label>
+		  	  <input class="radio-item" id="radio-item3" type="radio" name="radio-item">
+		  	  <label class="menu-radio-label" for="radio-item3">до 30%</label>
+		  	  <input class="radio-item" id="radio-item4" type="radio" name="radio-item">
+		  	  <label class="menu-radio-label" for="radio-item4">выше 30%</label>
+		  	</div>
+		  	<b class="menu-checkbox-label">Наполнители:</b>
+		  	<div class="menu-checkbox-items">
+		  	  <input type="checkbox" class="checkbox-item" id="checkbox-item1" name="checkbox-chocolade">
+		  	  <label for="checkbox-item1" class="checkbox-label-item">шоколадные</label>
+		  	  <input type="checkbox" class="checkbox-item" id="checkbox-item2" name="checkbox-sugar">
+		  	  <label for="checkbox-item2" class="checkbox-label-item">сахарные присыпки</label>
+		      <input type="checkbox" class="checkbox-item" id="checkbox-item3" name="checkbox-fruits">
+		  	  <label for="checkbox-item3" class="checkbox-label-item">фрукты</label>
+		  	  <input type="checkbox" class="checkbox-item" id="checkbox-item4" name="checkbox-syrup">
+		  	  <label for="checkbox-item4" class="checkbox-label-item">сиропы</label>
+		  	  <input type="checkbox" class="checkbox-item" id="checkbox-item5" name="checkbox-jams">
+		  	  <label for="checkbox-item5" class="checkbox-label-item">джемы</label>
+		  	</div>
+		  	<button class="menu-form-btn" type="submit">Применить</button>
+		  </form>
+	  </section>	
     <article class="product-item">
 		  <img class="icecream-img" src="http://placehold.it/150x100" alt="Мороженое"> 
 		  <span class="cost">310 Р/кг</span>
