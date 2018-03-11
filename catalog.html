@@ -8,12 +8,12 @@
 <body>
   <header class="header">
 	  <nav class="nav">
-	  	<a class="logo" href="#"><img class="logo-img" src="img/logo.svg" width="154" height="64" alt="Логотип"></a>
+	  	<a class="logo" href="index.html"><img class="logo-img" src="img/logo.svg" width="154" height="64" alt="Логотип"></a>
 	  	<ul class="nav-items">
 	  	  <li class="nav-item nav-item-current">
 	  	  	<a href="#">Каталог</a>
 	  	  	<!-- Меню каталога -->
-	  		  <ul class="menu-items visibility-hidden">
+	  		  <ul class="menu-items visually-hidden">
   	  	    <li class="menu-item"><a href="#">Новинки</a></li>
   	        <li class="menu-item"><a href="#">Сливочное</a></li>
   	        <li class="menu-item"><a href="#">Щербеты</a></li>
@@ -26,40 +26,43 @@
 	  	</ul>
 	  	<div class="header-block">
 	  	  <ul class="user-elements">
-	  	  	<li><button class="search"><i class="search-icon"></i></button></li>
-	  	  	<li><button class="signin"><i class="signin-icon"></i>Вход</button></li>
-	  	  	<li><button class="basket basket-current"><i class="basket-icon basket-icon-current"></i>Пусто</button></li>
+	  	  	<li class="user-element"><a class="search" href="#">Поиск</a></li>
+	  	  	<li class="user-element"><a class="signin" href="#">Вход</a></li>
+	  	  	<li class="user-element"><a class="basket basket-current" href="#">2 товара</a></li>
 	  	  </ul>
 	  	  <span class="work-hours">С 10 до 20, ежедневно</span>
 	  	  <span class="work-phone">8 812 450-25-25</span>
 	  	</div>
 	  	<!-- Поиск -->
 	  	<div class="modal-search">
-	  	  <input class="modal-input" type="text" name="search-icecream" placeholder="Что ищем?">
-	  	</div>
+          <label class="visually-hidden" for="modal-find">Поиск</label>
+  	  	  <input class="modal-find" id="modal-find" type="text" name="search-icecream" placeholder="Что ищем?">
+  	  	</div>
 	  	<!-- Авторизация и регистрация -->
 	  	<div class="modal-signup">
-	  	  <form action="#" method="post">
-	  	    <input class="modal-email" type="text" name="modal-email" placeholder="Электронная почта">
-	  	    <input class="modal-password" type="password" name="modal-password" placeholder="Пароль">
-	  	    <button class="modal-submit" type="submit" name="submit-btn">Войти</button>
-	  	    <a class="modal-forgot-pass" href="#">Забыли пароль?</a>
-	  	    <a class="modal-registration" href="#">Новая регистрация</a>
-	  	  </form>
-	  	</div>
+  	  	  <form action="#" method="post">
+            <label class="visually-hidden" for="modal-email">Электронная почта</label>
+  	  	    <input class="modal-email" id="modal-email" type="text" name="modal-email" placeholder="Электронная почта">
+            <label class="visually-hidden" for="modal-password">Пароль</label>
+  	  	    <input class="modal-password" id="modal-password" type="password" name="modal-password" placeholder="Пароль">
+  	  	    <button class="modal-submit" type="submit" name="submit-btn">Войти</button>
+  	  	    <a class="modal-forgot-pass" href="#">Забыли пароль?</a>
+  	  	    <a class="modal-registration" href="#">Новая регистрация</a>
+  	  	  </form>
+  	  	</div>
 	  	<!-- Корзина с двумя товарами -->
 	  	<div class="modal-basket">
 	  	  <div class="modal-product-items">
 	  	  	<div class="modal-product-item">
 	  	  	  <span class="modal-cross"></span>
-	  	  	  <img class="modal-img-ice" src="img/icecream-small-1.jpg" width="33" height="33" alt="Мороженое">
+	  	  	  <img class="modal-img-ice" src="img/icecream-small-1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
 	  	  	  <span class="modal-title">Пломбир с апельсиновым джемом</span>
 	  	  	  <span class="modal-weight">1,5 кг x </span><span class="modal-price">200 руб.</span>
 	  	  	  <b class="modal-price-item">300 руб.</b>
 	  	  	</div>	
 	  	  	<div class="modal-product-item">
 	  	  	  <span class="modal-cross"></span>
-	  	  	  <img class="modal-img-ice" src="img/icecream-small-2.jpg" width="33" height="33" alt="Мороженое">
+	  	  	  <img class="modal-img-ice" src="img/icecream-small-2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
 	  	  	  <span class="modal-title">Клубничный пломбир с присыпкой из белого шоколада</span>
 	  	  	  <span class="modal-weight">1,5 кг x </span><span class="modal-price">300 руб.</span>
 	  	  	  <span class="modal-price-item">450 руб.</span>
@@ -74,8 +77,8 @@
 	  <section class="main-form">
 		  <div class="breadcrumbs">
 		  	<ul class="breadcrumbs-items">
-		  	  <li class="breadcrumbs-item">Главная</li>
-		  	  <li class="breadcrumbs-item">Каталог</li>
+		  	  <li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
+		  	  <li class="breadcrumbs-item"><a href="#">Каталог</a></li>
 		  	  <li class="breadcrumbs-item-current">Сливочное</li>
 		  	</ul>
 		  </div>
@@ -84,8 +87,9 @@
 		  	<label class="menu-sort-label" for="menu-sort-items">Сортировка:</label>
 		  	<select class="menu-sort-items" id="menu-sort-items">
 		      <option class="menu-sort-item" value="popularity" selected>по популярности</option>
-		      <option class="menu-sort-item" value="name">по названию</option>
-		      <option class="menu-sort-item" value="price">по цене</option>
+		      <option class="menu-sort-item" value="name">сначала недорогие</option>
+		      <option class="menu-sort-item" value="price">сначала дорогие</option>
+		      <option class="menu-sort-item" value="price">по жирности</option>
 		  	</select>
 		  	<label class="menu-range-label">Цена: 100 руб. - 500 руб.</label>
 		  	<input class="menu-range" type="range" min="0" max="800" step="50">
@@ -102,16 +106,16 @@
 		  	</div>
 		  	<b class="menu-checkbox-label">Наполнители:</b>
 		  	<div class="menu-checkbox-items">
-		  	  <input type="checkbox" class="checkbox-item" id="checkbox-item1" name="checkbox-chocolade">
-		  	  <label for="checkbox-item1" class="checkbox-label-item">шоколадные</label>
-		  	  <input type="checkbox" class="checkbox-item" id="checkbox-item2" name="checkbox-sugar">
-		  	  <label for="checkbox-item2" class="checkbox-label-item">сахарные присыпки</label>
-		      <input type="checkbox" class="checkbox-item" id="checkbox-item3" name="checkbox-fruits">
-		  	  <label for="checkbox-item3" class="checkbox-label-item">фрукты</label>
-		  	  <input type="checkbox" class="checkbox-item" id="checkbox-item4" name="checkbox-syrup">
-		  	  <label for="checkbox-item4" class="checkbox-label-item">сиропы</label>
-		  	  <input type="checkbox" class="checkbox-item" id="checkbox-item5" name="checkbox-jams">
-		  	  <label for="checkbox-item5" class="checkbox-label-item">джемы</label>
+		  	  <input class="checkbox-item" id="checkbox-item1" type="checkbox"  name="checkbox-chocolade">
+		  	  <label class="checkbox-label-item" for="checkbox-item1">шоколадные</label>
+		  	  <input class="checkbox-item" id="checkbox-item2" type="checkbox" name="checkbox-sugar">
+		  	  <label class="checkbox-label-item" for="checkbox-item2">сахарные присыпки</label>
+		      <input class="checkbox-item" id="checkbox-item3" type="checkbox" name="checkbox-fruits">
+		  	  <label class="checkbox-label-item" for="checkbox-item3">фрукты</label>
+		  	  <input class="checkbox-item" id="checkbox-item4" type="checkbox" name="checkbox-syrup">
+		  	  <label class="checkbox-label-item" for="checkbox-item4">сиропы</label>
+		  	  <input class="checkbox-item" id="checkbox-item5" type="checkbox" name="checkbox-jams">
+		  	  <label class="checkbox-label-item" for="checkbox-item5">джемы</label>
 		  	</div>
 		  	<button class="menu-form-btn" type="submit">Применить</button>
 		  </form>
@@ -120,79 +124,79 @@
 		  <img class="icecream-img" src="img/product-1.jpg" width="267" height="267" alt="Мороженое с апельсиновым джемом"> 
 		  <span class="cost">310 Р/кг</span>
 		  <h2 class="icecream-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
-		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+		  <a class="icecream-view visually-hidden" href="#">Быстрый просмотр</a>
 		</article>
 		<article class="product-item">
 		  <img class="icecream-img" src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное мороженое">
 		  <span class="cost">380 Р/кг</span>
 		  <h2 class="icecream-title">Сливочно-кофейное с кусочками шоколада</h2>
-		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+		  <a class="icecream-view visually-hidden" href="#">Быстрый просмотр</a>
 		</article>
 		<article class="product-item">
 		  <img class="icecream-img" src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное мороженое">
 		  <span class="cost">355 Р/кг</span>
 		  <h2 class="icecream-title">Сливочно-клубничное с посыпкой из белого шоколада</h2>
-		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+		  <a class="icecream-view visually-hidden" href="#">Быстрый просмотр</a>
 		</article>
 		<article class="product-item">
 		  <img class="icecream-img" src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле">
 		  <span class="cost">415 Р/кг</span>
 		  <h2 class="icecream-title">Сливочное крем-брюле с карамельной подливкой</h2>
-		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+		  <a class="icecream-view visually-hidden" href="#">Быстрый просмотр</a>
 		</article>
 		<!-- Вторая строка -->
 		<article class="product-item">
 		  <img class="icecream-img" src="img/product-5.jpg" width="267" height="267" alt="Сливочное мороженое с брусничным джемом">
 		  <span class="cost">325 Р/кг</span>
 		  <h2 class="icecream-title">Сливочное с брусничным джемом</h2>
-		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+		  <a class="icecream-view visually-hidden" href="#">Быстрый просмотр</a>
 		 </article>
 		 <article class="product-item">
 		  <img class="icecream-img" src="img/product-6.jpg" width="267" height="267" alt="Сливочно-черничное мороженое">
 		  <span class="cost">410 Р/кг</span>
 		  <h2 class="icecream-title">Сливочно-черничное с цельными ягодами черники</h2>
-		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+		  <a class="icecream-view visually-hidden" href="#">Быстрый просмотр</a>
 		</article>
 		<article class="product-item">
 		  <img class="icecream-img" src="img/product-7.jpg" width="267" height="267" alt="Сливочно-лимонное мороженое">
 		  <span class="cost">375 Р/кг</span>
 		  <h2 class="icecream-title">Сливочно-лимонное с карамельной присыпкой</h2>
-		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+		  <a class="icecream-view visually-hidden" href="#">Быстрый просмотр</a>
 		</article>
 		<article class="product-item">
 		  <img class="icecream-img" src="img/product-8.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
 		  <span class="cost">320 Р/кг</span>
 		  <h2 class="icecream-title">Сливочное с шоколадной стружкой</h2>
-		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+		  <a class="icecream-view visually-hidden" href="#">Быстрый просмотр</a>
 		</article>
 		<!-- Третья строка -->
 		<article class="product-item">
 		  <img class="icecream-img" src="img/product-9.jpg" width="267" height="267" alt="Сливочно-ванильное мороженое">
 		  <span class="cost">440 Р/кг</span>
 		  <h2 class="icecream-title">Сливочно-ванильное с кусочками шоколада</h2>
-		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+		  <a class="icecream-view visually-hidden" href="#">Быстрый просмотр</a>
 		</article>
 		<article class="product-item">
 		  <img class="icecream-img" src="img/product-10.jpg" width="267" height="267" alt="Сливочное мороженое с ментоловым сиропом">
 		  <span class="cost">435 Р/кг</span>
 		  <h2 class="icecream-title">Сливочное с ментоловым сиропом</h2>
-		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+		  <a class="icecream-view visually-hidden" href="#">Быстрый просмотр</a>
 		</article>
 		<article class="product-item">
 		  <img class="icecream-img" src="img/product-11.jpg" width="267" height="267" alt="Сливочное мороженое с кусочками черного шоколада">
 		  <span class="cost">355 Р/кг</span>
 		  <h2 class="icecream-title">Сливочное с кусочками черного шоколада</h2>
-		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+		  <a class="icecream-view visually-hidden" href="#">Быстрый просмотр</a>
 		</article>
 		<article class="product-item">
 		  <img class="icecream-img" src="img/product-12.jpg" width="267" height="267" alt="Сливочное мороженое с мятным сиропом">
 		  <span class="cost">420 Р/кг</span>
 		  <h2 class="icecream-title">Сливочное с мятным сиропом</h2>
-		  <a class="icecream-view visibility-hidden" href="#">Быстрый просмотр</a>
+		  <a class="icecream-view visually-hidden" href="#">Быстрый просмотр</a>
 		</article>
 	  <ul class="pagination-items">
-	  	<li class="pagination-item"><a href="#" class="arrow-left visibility-hidden"></a></li>
-      <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
+	  	<li class="pagination-item"><a href="#" class="arrow-left visually-hidden"></a></li>
+      <li class="pagination-item pagination-item-current"><a>1</a></li>
       <li class="pagination-item"><a href="#">2</a></li>
       <li class="pagination-item"><a href="#">3</a></li>
       <li class="pagination-item"><a href="#">4</a></li>
@@ -202,10 +206,10 @@
 	</main>
   	<footer class="footer">
   	  <div class="socials">
-  	  	<a class="twitter-link" href="#"></a>
-  	  	<a class="instagram-link" href="#"></a>
-  	  	<a class="facebook-link" href="#"></a>
-  	  	<a class="vk-link" href="#"></a>
+  	  	<a class="twitter-link" href="#">Твиттер</a>
+  	  	<a class="instagram-link" href="#">Инстаграм</a>
+  	  	<a class="facebook-link" href="#">Фейсбук</a>
+  	  	<a class="vk-link" href="#">ВКонтакте</a>
   	  </div>
   	  <nav class="nav-footer">
   	    <ul class="nav-footer-items">
