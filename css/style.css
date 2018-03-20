@@ -259,6 +259,8 @@ a {
 .modal-registration:focus,
 .modal-registration:active {
     color: #e84d37;
+
+    border-bottom-color: #f9cdc4;
 }
 
 /* Корзина с двумя товарами */
@@ -466,6 +468,14 @@ a {
     border-bottom: 2px solid #353535;
 }
 
+.news-blog-paragraph:hover,
+.news-blog-paragraph:focus,
+.news-blog-paragraph:active {
+    color: #e84d37;
+
+    border-bottom-color: #f9cdc4;
+}
+
 /* Рассылка */
 .subscription {
     background-color: #92cdff;
@@ -560,6 +570,14 @@ a {
     color: #ffffff;
 }
 
+.nav-footer-item a:hover,
+.nav-footer-item a:focus,
+.nav-footer-item a:active {
+    color: #ffbc9e;
+
+    border-bottom-color: #a7a294;
+}
+
 .htmlacademy-made {
     font-family: "Roboto", Arial, sans-serif;
     font-size: 12px;
@@ -578,6 +596,14 @@ a {
     color: #fefefe;
 
     border-bottom: 1px solid #9db1a5;
+}
+
+.htmlacademy-link:hover,
+.htmlacademy-link:focus,
+.htmlacademy-link:active {
+    color: #ffbc9e;
+
+    border-bottom-color: #a7a294;
 }
 
 /* Модальное окно - Обратная связь */
@@ -673,6 +699,14 @@ a {
     color: #ffffff;
 
     border-bottom: 1px solid #aebeb5;
+}
+
+.breadcrumbs-item a:hover,
+.breadcrumbs-item a:focus,
+.breadcrumbs-item a:active {
+    color: #ffbc9e;
+
+    border-bottom-color: #a7a294;
 }
 
 /* Форма */
