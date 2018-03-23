@@ -356,8 +356,8 @@ a {
 
 /* Слайдер */
 .slider {
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -135px;
     z-index: 1;
 
     background-color: #849d8f;
@@ -372,10 +372,13 @@ a {
     height: 881px;
 }
 
+.slider-container {
+    padding-top: 390px;
+}
+
 .slider-title {
     display: block;
-    margin-top: 390px;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 
     font-family: "Roboto Bold", Arial, sans-serif;
     font-size: 60px;
@@ -400,14 +403,14 @@ a {
 .slider-btn {
     display: block;
     width: 280px;
-    min-height: 65px;
+    min-height: 63px;
     margin: 0 auto;
 
     font-size: 32px;
     line-height: 44px;
     color: #fefefe;
 
-    line-height: 65px;
+    line-height: 60px;
     text-align: center;
     
     border-radius: 35px;
@@ -419,12 +422,21 @@ a {
 }
 
 .slider-next {
+    width: 22px;
+    height: 22px;
+    margin-right: 9px;
     font-size: 0;
 
     background-color: transparent;
 
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
     border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.slider-next-current {
+    background-color: #ffffff;
 }
 
 .slider-next:hover,
@@ -442,7 +454,7 @@ a {
     justify-content: space-between;
     width: 1146px;
     min-height: 231px;
-    margin-top: 515px;
+    margin-top: -369px;
     margin-bottom: 40px;
     margin-left: 27px;
     margin-right: 27px;
@@ -566,6 +578,7 @@ a {
     margin-left: 27px;
     margin-right: 27px;
     margin-bottom: 40px;
+    margin-top: -50px;
     padding: 27px 20px;
 
     background-color: #ede1c6;
