@@ -52,6 +52,40 @@ a {
     text-decoration: none;
 }
 
+/*img {
+    max-width: 100%;
+    height: auto;
+}*/
+
+/* Скрытие невидимых в разметке элементов */
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+/*.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  font-size: none;
+}*/
+
 .button {
     font-family: "Roboto Bold", Arial, sans-serif;
     font-size: 18px;
@@ -69,7 +103,6 @@ a {
 
 .button:hover,
 .button:focus {
-    background-image: #f17e65;
     background: #f17e65;
 }
 
@@ -77,16 +110,6 @@ a {
     background-image: linear-gradient(to top, #f26843, #e74a35);
 
     box-shadow: inset 0 2px 5px 0 rgba(160, 32, 11, 0.76);  /*#a0200b*/
-}
-
-/* Скрытие невидимых в разметке элементов */
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  font-size: none;
 }
 
 .nav {
@@ -127,14 +150,21 @@ a {
 }
 
 .logo-img {
+    position: relative;
+    top: -1px;
+
     width: 154px;
     height: 64px;
 }
 
 .nav-items {
+    display: flex;
+    flex-wrap: wrap;
     width: 698px;
     margin: 0;
     padding: 0;
+    margin-top: 11px;
+    margin-left: 9px;
 
     list-style: none;
 
@@ -147,13 +177,34 @@ a {
 .user-item a {
     font-size: 16px;
     line-height: 18px;
+    color: #ffffff; 
+}
 
-    color: #ffffff;
+.menu-item a {
+    border-radius: 35px;
 }
 
 .menu-item > a {
-    border-bottom: 1px solid #adbdb4;
+    display: block;
+    padding: 8px 14px;
+
+    /*border-bottom: 1px solid #adbdb4;*/ 
+
+    /* Временно */
+    text-decoration: underline;
+
+    box-sizing: border-box;
 }
+
+/*.menu-item > a::after {
+    position: relative;
+    vertical-align: top;
+    content: "";
+    text-align: center;
+    height: 1px;
+    color: #adbdb4;
+    background-color: #adbdb4;
+}*/
 
 .menu-item > a:hover, 
 .menu-item > a:focus {
@@ -161,6 +212,7 @@ a {
     color: #333333;
 
     border: none;
+    text-decoration: none;
 }
 
 .menu-item > a:active {
@@ -168,6 +220,9 @@ a {
     box-shadow: inset 0 2px 1px 0 #696969;
 
     border: none;
+    text-decoration: none;
+
+    border-radius: 15px;
 }
 
 .nav-item-current:first-child > a {
@@ -175,6 +230,7 @@ a {
     background-color: #d07058;
     color: #ffffff;
 
+    text-decoration: none;
     border: none;
 }
 
@@ -219,14 +275,19 @@ a {
 
 /* Пользовательское меню */
 .user-items {
-    width: 405px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 267px;
     margin: 0;
     padding: 0;
+    margin-top: 12px;
+    margin-left: 30px;
 
     list-style: none;
 
     /*Временно для сетки*/
-    min-height: 125px;
+    min-height: 67px;
 }
 
 .user-item a {
@@ -239,24 +300,114 @@ a {
     text-decoration: none;
 }
 
-.user-item a:hover, 
+/*.user-item a:hover, 
 .user-item a:focus {
     background-color: #f8f7f4;
     color: #323232;
+}*/
+
+.user-search a,
+.user-signin a,
+.user-basket a {
+    position: relative;
+    display: block;
+
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.user-search a::before,
+.user-signin a::before,
+.user-basket a::before {
+    content: "";
+
+    position: absolute;
+    z-index: 4;
+
+    display: block;
+}
+
+
+.user-search a {
+    width: 33px;
+    height: 33px;
+    
+    border-radius: 50%;
+}
+
+.user-search a::before {
+    top: 8px;
+    left: 8px;
+
+    width: 18px;
+    height: 18px;
+
+    background-image: url("../img/loupe.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    /*background-color: #ffffff;*/
+}
+
+.user-signin a {
+    padding-top: 7px;
+    padding-bottom: 9px;
+    padding-left: 45px;
+    padding-right: 15px;
+
+    border-radius: 35px;
+}
+
+.user-signin a::before {
+    top: 6px;
+    left: 17px;
+
+    width: 21px;
+    height: 19px;
+
+    background-image: url("../img/login.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    /*background-color: #ffffff;*/
+}
+
+.user-basket a {
+    padding-top: 7px;
+    padding-bottom: 9px;
+    padding-left: 44px;
+    padding-right: 34px;
+
+    border-radius: 35px;
+}
+
+.user-basket a::before {
+    top: 6px;
+    left: 16px;
+
+    width: 21px;
+    height: 20px;
+
+    background-image: url("../img/basket.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    /*background-color: #ffffff;*/
 }
 
 .user-info {
+    margin-top: -3px;
+    margin-right: 27px;
     text-align: right;
 }
 
 .work-hours {
+    display: inline-block;
+    margin-bottom: 5px;
+
     font-family: "Roboto Bold", Arial, sans-serif;
     font-size: 14px;
     line-height: 16px;
     font-weight: 700;
 }
 
-.work-phone {
+.user-info a {
     font-family: "Roboto Bold", Arial, sans-serif;
     font-size: 22px;
     line-height: 24px;
@@ -264,7 +415,8 @@ a {
 }
 
 /* Модальные окна пользовательского меню */
-.modal-search, .modal-signup {
+.modal-search, 
+.modal-signup {
     font-family: "Roboto", Arial, sans-serif;
     font-size: 14px;
     line-height: 24px;
@@ -407,24 +559,24 @@ a {
     margin: 0 auto;
 
     font-size: 32px;
-    line-height: 44px;
-    color: #fefefe;
-
+    /*line-height: 44px;*/
     line-height: 60px;
     text-align: center;
+    color: #fefefe;
+    /*text-shadow: 0 2px 5px 0 rgba(160, 32, 11, 0.75);*/
     
     border-radius: 35px;
 }
 
 .slider-next-wrapper {
     position: relative;
-    top: -45px;
+    top: -48px;
 }
 
 .slider-next {
-    width: 22px;
-    height: 22px;
-    margin-right: 9px;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
     font-size: 0;
 
     background-color: transparent;
@@ -468,21 +620,23 @@ a {
 .choise-element {
     width: 560px;
     min-height: 231px;
-/*    padding: 25px 20px;*/
+    padding: 15px 18px;
 
     background-repeat: no-repeat;
 
     border-radius: 16px;
+
+    box-sizing: border-box;
 }
 
 .choise-element-1 {
-    background-color: #bf6983;
+    /*background-color: #bf6983;*/
     background-image: url("../img/raspberry-back.jpg");
     background-repeat: no-repeat;
 }
 
 .choise-element-2 {
-    background-color: #170b08;
+    /*background-color: #170b08;*/
     background-image: url("../img/chocolate-back.jpg");
     background-repeat: no-repeat;
 }
@@ -497,12 +651,51 @@ a {
 }
 
 .choise-element-paragraph {
+    margin-top: 15px;
+
     font-family: "Roboto Bold", Arial, sans-serif;
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
 
     color: #ffffff;
+}
+
+.raspberry-btn,
+.chocolate-btn {
+    position: relative; 
+
+    display: inline-block;
+    
+    padding-top: 9px;
+    padding-bottom: 14px;
+
+    font-family: "Roboto Bold", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+
+    border-radius: 35px;
+}
+
+.raspberry-btn {
+    left: 355px;
+    top: 27px;
+    
+    padding-top: 9px;
+    padding-bottom: 13px;
+    padding-left: 23px;
+    padding-right: 23px;
+}
+
+.chocolate-btn {
+    left: 332px;
+    top: 27px;
+    
+    padding-top: 8px;
+    padding-bottom: 13px;
+    padding-left: 21px;
+    padding-right: 21px;
 }
 
 /* Раздел Хиты */
@@ -517,8 +710,27 @@ a {
 }
 
 .product-item {
+    position: relative;
+    top: -2px;
+    z-index: 1;
+
     width: 264px;
     margin-left: 27px;
+}
+
+.product-item::before {
+    content: "";
+
+    position: absolute;
+
+    display: block;
+    width: 61px;
+    height: 61px;
+
+    background-image: url("../img/hit.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
 }
 
 .product-item:last-child {
@@ -540,6 +752,23 @@ a {
 }
 
 .product-item-cost {
+    position: relative;
+    top: -65px;
+    left: -2px;
+
+    font-family: "Roboto Bold", Arial, sans-serif;
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+.product-item-icon {
+    position: relative;
+    top: -63px;
+    left: 0px;
+
     font-family: "Roboto Bold", Arial, sans-serif;
     font-size: 45px;
     line-height: 45px;
@@ -549,6 +778,9 @@ a {
 }
 
 .product-item-weight {
+    position: relative;
+    top: -65px;
+
     font-family: "Roboto Bold", Arial, sans-serif;
     font-size: 30px;
     line-height: 45px;
@@ -558,6 +790,9 @@ a {
 }
 
 .product-item-title {
+    position: relative;
+    top: -57px;
+
     font-family: "Roboto Medium", Arial, sans-serif;
     font-size: 16px;
     line-height: 22px;
@@ -572,14 +807,16 @@ a {
 
 /* О сайте */
 .aboutus {
+    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: 27px;
     margin-right: 27px;
     margin-bottom: 40px;
-    margin-top: -50px;
-    padding: 27px 20px;
+    margin-top: -115px;
+    padding: 24px 20px;
+    padding-bottom: 5px;
 
     background-color: #ede1c6;
     background-image: url("../img/wafer-back.jpg");
@@ -598,6 +835,10 @@ a {
 }
 
 .aboutus-advantages {
+    position: relative;
+    top: 5px;
+    left: -5px;
+
     width: 480px;
     min-height: 60px;
     padding-left: 60px;
@@ -608,6 +849,51 @@ a {
     font-weight: 400;
 
     color: #323232;
+}
+
+.aboutus-advantages:nth-of-type(3),
+.aboutus-advantages:last-child {
+    top: -5px;
+}
+
+.aboutus-advantages:nth-of-type(2), 
+.aboutus-advantages:last-child {
+    left: 23px;
+}
+
+.aboutus-advantages::before {
+    content: "";
+
+    position: absolute;
+    top: -11px;
+    left: 5px;
+
+    display: block;
+    width: 49px;
+    height: 49px;
+
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.aboutus-advantages-1::before {
+    background-image: url("../img/ice-cream.svg");
+}
+
+.aboutus-advantages-2::before {
+    left: 1px;
+
+    background-image: url("../img/cow.svg");
+}
+
+.aboutus-advantages-3::before {
+    background-image: url("../img/leaf.svg");
+}
+
+.aboutus-advantages-4::before {
+    left: 1px;
+
+    background-image: url("../img/thermometer.svg");
 }
 
 /* Новости */
@@ -631,7 +917,7 @@ a {
 }
 
 .news-blog-container {
-    padding: 5px 20px;
+    padding: 9px 20px;
     padding-right: 250px;
 }
 
@@ -645,13 +931,17 @@ a {
 }
 
 .news-blog-paragraph {
+    position: relative;
+    top: -10px;
+
     font-family: "Roboto Bold", Arial, sans-serif;
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
 
     color: #323232;
-
+    
+    /* Временно, заменю псевдоэлементом */
     border-bottom: 2px solid #353535;
 }
 
@@ -669,19 +959,19 @@ a {
     min-height: 220px;
 
     background-color: #92cdff;
-    background-image: -webkit-repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 5px, #92cdff 5px, #92cdff 10px, #f8f7f4 10px, #f8f7f4 15px, #fe9e90 15px, #fe9e90 20px); 
-    background-image: -o-repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 5px, #92cdff 5px, #92cdff 10px, #f8f7f4 10px, #f8f7f4 15px, #fe9e90 15px, #fe9e90 20px); 
-    background-image: -moz-repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 5px, #92cdff 5px, #92cdff 10px, #f8f7f4 10px, #f8f7f4 15px, #fe9e90 15px, #fe9e90 20px); 
-    background-image: repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 5px, #92cdff 5px, #92cdff 10px, #f8f7f4 10px, #f8f7f4 15px, #fe9e90 15px, #fe9e90 20px);
+    background-image: -webkit-repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 6px, #92cdff 6px, #92cdff 12px, #f8f7f4 12px, #f8f7f4 18px, #fe9e90 18px, #fe9e90 24px); 
+    background-image: -o-repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 6px, #92cdff 6px, #92cdff 12px, #f8f7f4 12px, #f8f7f4 18px, #fe9e90 18px, #fe9e90 24px); 
+    background-image: -moz-repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 6px, #92cdff 6px, #92cdff 12px, #f8f7f4 12px, #f8f7f4 18px, #fe9e90 18px, #fe9e90 24px); 
+    background-image: repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 6px, #92cdff 6px, #92cdff 12px, #f8f7f4 12px, #f8f7f4 18px, #fe9e90 18px, #fe9e90 24px);
     
     border-radius: 15px;
 }
 
 .subscription-container {
     width: 550px;
-    min-height: 210px;
-    margin-top: -11px;
-    margin-left: 5px;
+    min-height: 212px;
+    margin-top: -13px;
+    margin-left: 6px;
 
     background-color: #f8f7f4;
 
@@ -702,16 +992,16 @@ a {
 }
 
 .substraction-email {
-    width: 366px;
-    height: 42px;
-    margin-top: 10px;
+    width: 368px;
+    height: 45px;
+    margin-top: 20px;
     margin-left: 20px;
     margin-right: 6px;
     font-family: "Roboto", Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
-    text-indent: 15px;
+    text-indent: 12px;
 
     color: #5a5a5a;
 
@@ -731,6 +1021,7 @@ a {
 .substraction-send {
     width: 130px;
     min-height: 45px;
+
     border-radius: 35px;
 }
 
@@ -767,7 +1058,9 @@ a {
 }
 
 .feedback-container {
-    margin-left: 25px;
+    position: relative;
+    top: 15px;
+    margin-left: 24px;
 }
 
 .feedback-address-block {
@@ -800,17 +1093,17 @@ a {
 .feedback-number {
     display: inline-block;
     margin-top: 7px;
-    margin-bottom: 7px;
     line-height: 22px;
 }
 
 .feedback-btn {
     display: inline-block;
-    width: 254px;
-    min-height: 45px;
+    width: 252px;
+    min-height: 43px;
+    margin-top: 2px;
     margin-left: -27px;
 
-    line-height: 45px;
+    line-height: 39px;
 
     border-radius: 35px;
 }
@@ -825,11 +1118,48 @@ a {
 }
 
 .footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    position: relative;
     width: 267px;
 }
 
 .footer-socials > a {
-    border: 1px solid #c2cec7;
+    margin-top: 36px;
+    margin-left: 50px;
+}
+
+.footer-socials > a::before {
+    content: "";
+
+    position: absolute;
+
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    
+    border: 3px solid #c2cec7;
+    border-radius: 50%;
+}
+
+.twitter-link::before {
+    background-image: url("../img/twitter.svg");
+}
+
+.instagram-link::before {
+    background-image: url("../img/instagram.svg");
+}
+
+.facebook-link::before {
+    background-image: url("../img/facebook.svg");
+}
+
+.vk-link::before {
+    background-image: url("../img/vk.svg");
 }
 
 .footer-nav {

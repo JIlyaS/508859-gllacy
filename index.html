@@ -28,15 +28,15 @@
           	  <li class="menu-item"><a href="#">О Компании</a></li>	
           	</ul>
         	  <ul class="user-items">
-              <li class="user-item"><a class="visually-hidden" href="#">Поиск</a></li>
-              <li class="user-item"><a class="signin" href="#">Вход</a></li>
-              <li class="user-item"><a class="basket" href="#">Пусто</a></li>
+              <li class="user-item user-search"><a href="#"></a></li> <!-- Поиск -->
+              <li class="user-item user-signin"><a href="#">Вход</a></li>
+              <li class="user-item user-basket"><a href="#">Пусто</a></li>
             </ul>
           </div>
         </div>
         <div class="user-info">
-          <span class="work-hours">С 10 до 20, ежедневно</span>
-          <a class="work-phone" href="tel:88124502525">8 812 450-25-25</a>
+          <span class="work-hours">С 10 до 20, ежедневно</span><br>
+          <a href="tel:88124502525">8 812 450-25-25</a>
         </div>
       	<!-- Поиск -->
       	<div class="modal-search visually-hidden">
@@ -85,14 +85,14 @@
       	<div class="choise-element choise-element-1">
       	  <b class="choise-element-title">Малинка даром!</b>
       	  <p class="choise-element-paragraph">
-      	  	При покупке 2 кг любого фруктового мороженного, добавим в ваш заказ банку малинового варенья бесплатно.
+      	  	При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
       	  </p>
-      	  <a class="button raspberry-btn" href="#">Хочу варенья!</a>
+      	  <a class="button raspberry-btn" href="#">Хочу варенье!</a>
       	</div>
       	<div class="choise-element choise-element-2">
-      	  <b class="choise-element-title">Шоколад даром!</b>
+      	  <b class="choise-element-title">Шоколадки даром!</b>
       	  <p class="choise-element-paragraph">
-      	  	При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной поыпки совершенно бесплатно.
+      	  	При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
       	  </p>
       	  <a class="button chocolate-btn" href="#">Хочу шоколадки!</a>
         </div>
@@ -101,28 +101,32 @@
         <h2 class="visually-hidden">Товары</h2>
     	  <article class="product-item">
     	  	<img class="product-item-img" src="img/product-1.jpg" width="267" height="267" alt="Мороженое с апельсиновым джемом"> 
-    	  	<span class="product-item-cost">310 &#8381;</span>
+    	  	<span class="product-item-cost">310</span>
+          <span class="product-item-icon">&#8381;</span>
           <span class="product-item-weight">/кг</span>
     	  	<h2 class="product-item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
     	  	<a class="button product-item-view visually-hidden" href="#">Быстрый просмотр</a>
     	  </article>
     	  <article class="product-item">
     	  	<img class="product-item-img" src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное мороженое">
-          <span class="product-item-cost">380 &#8381;</span>
+          <span class="product-item-cost">380</span>
+          <span class="product-item-icon">&#8381;</span>
           <span class="product-item-weight">/кг</span>
     	  	<h2 class="product-item-title">Сливочно-кофейное с кусочками шоколада</h2>
     	  	<a class="button product-item-view visually-hidden" href="#">Быстрый просмотр</a>
     	  </article>
     	  <article class="product-item">
     	    <img class="product-item-img" src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное мороженое">
-          <span class="product-item-cost">355 &#8381;</span>
+          <span class="product-item-cost">355</span>
+          <span class="product-item-icon">&#8381;</span>
           <span class="product-item-weight">/кг</span>
-    	  	<h2 class="product-item-title">Сливочно-клубничное с посыпкой из белого шоколада</h2>
+    	  	<h2 class="product-item-title">Сливочно-клубничное с присыпкой из белого шоколада</h2>
     	  	<a class="button product-item-view visually-hidden" href="#">Быстрый просмотр</a>
     	  </article>
     	  <article class="product-item">
       		<img class="product-item-img" src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле">
-          <span class="product-item-cost">415 &#8381;</span>
+          <span class="product-item-cost">415</span>
+          <span class="product-item-icon">&#8381;</span>
           <span class="product-item-weight">/кг</span>
     	  	<h2 class="product-item-title">Сливочное крем-брюле с карамельной подливкой</h2>
     	  	<a class="button product-item-view visually-hidden" href="#">Быстрый просмотр</a>
@@ -130,17 +134,17 @@
       </section>
       <section class="aboutus">
         <h2 class="visually-hidden">О нас</h2>
-       	<b class="aboutus-title">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес</b>
-    		<p class="aboutus-advantages">
+       	<b class="aboutus-title">Магазин Глэйси &#8212; это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</b>
+    		<p class="aboutus-advantages aboutus-advantages-1">
     		  Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий. 	
     		</p>
-        <p class="aboutus-advantages">
+        <p class="aboutus-advantages aboutus-advantages-2">
           Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество. 
         </p>
-    		<p class="aboutus-advantages">
+    		<p class="aboutus-advantages aboutus-advantages-3">
     		  Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.	
     		</p>
-    		<p class="aboutus-advantages">
+    		<p class="aboutus-advantages aboutus-advantages-4">
     		  Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.	
     		</p>
       </section>
@@ -184,10 +188,10 @@
     </main>
     <footer class="footer">
       <div class="footer-socials">
-      	<a class="twitter-link visually-hidden" href="#">Твиттер</a>
-      	<a class="instagram-link visually-hidden" href="#">Инстаграм</a>
-      	<a class="facebook-link visually-hidden" href="#">Фейсбук</a>
-      	<a class="vk-link visually-hidden" href="#">ВКонтакте</a>
+      	<a class="twitter-link" href="#"></a> <!-- Твиттер -->
+      	<a class="instagram-link" href="#"></a> <!-- Инстаграм -->
+      	<a class="facebook-link" href="#"></a> <!-- Фейсбук -->
+      	<a class="vk-link" href="#"></a> <!-- ВКонтакте -->
       </div>
       <nav class="footer-nav">
         <ul class="footer-nav-items">
