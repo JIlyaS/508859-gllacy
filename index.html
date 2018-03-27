@@ -28,7 +28,7 @@
           	  <li class="menu-item"><a href="#">О Компании</a></li>	
           	</ul>
         	  <ul class="user-items">
-              <li class="user-item user-search"><a href="#"></a></li> <!-- Поиск -->
+              <li class="user-item user-search"><a href="#"><span class="visually-hidden">Поиск</span></a></li>
               <li class="user-item user-signin"><a href="#">Вход</a></li>
               <li class="user-item user-basket"><a href="#">Пусто</a></li>
             </ul>
@@ -61,23 +61,25 @@
     <main class="main">
       <div class="slider">
         <div class="slider-container">
-        <!-- <div class="slider-item slider-item-1"> -->
-          <b class="slider-title">Крем-брюле и пломбир<br> с малиновым джемом</b>
-        <!-- </div> -->
-        <!-- <div class="slider-item slider-item-2 visually-hidden">
-          <b class="slider-title">Шоколадный пломбир и лимонный сорбет</b>
-        </div>
-        <div class="slider-item slider-item-3 visually-hidden">
-          <b class="slider-title">Пломбир с помадкой и клубничный щербет</b>
-        </div> -->
-          <div class="slider-btn-wrapper">
-            <a class="button slider-btn" href="#">Давайте оба!</a>
-            <div class="slider-next-wrapper">
-              <button class="slider-next slider-next-current" type="button">Первый слайд</button>
-              <button class="slider-next" type="button">Второй слайд</button>
-              <button class="slider-next" type="button">Третий слайд</button>
-            </div>
-          </div> 
+          <ul class="slider-items">
+            <li class="slider-item" id="slide1">
+              <h3 class="slider-title">Крем-брюле и пломбир<br> с малиновым джемом</h3>
+              <a class="button slider-btn" href="#">Давайте оба!</a>
+            </li>
+            <li class="slider-item visually-hidden" id="slide2">
+              <h3 class="slider-title">Шоколадный пломбир<br> и лимонный сорбет</h3>
+              <a class="button slider-btn" href="#">Давайте оба!</a>
+            </li>
+            <li class="slider-item visually-hidden" id="slide3">
+              <h3 class="slider-title">Пломбир с помадкой<br> и клубничный щербет</h3>
+              <a class="button slider-btn" href="#">Давайте оба!</a>
+            </li>
+          </ul>  
+          <div class="slider-next-wrapper">
+            <button class="slider-next slider-next-current" type="button">Первый слайд</button>
+            <button class="slider-next" type="button">Второй слайд</button>
+            <button class="slider-next" type="button">Третий слайд</button>
+          </div>     
         </div>  
       </div>
       <section class="choise-ice">
@@ -188,10 +190,10 @@
     </main>
     <footer class="footer">
       <div class="footer-socials">
-      	<a class="twitter-link" href="#"></a> <!-- Твиттер -->
-      	<a class="instagram-link" href="#"></a> <!-- Инстаграм -->
-      	<a class="facebook-link" href="#"></a> <!-- Фейсбук -->
-      	<a class="vk-link" href="#"></a> <!-- ВКонтакте -->
+      	<a class="twitter-link" href="#"><span class="visually-hidden">Твиттер</span></a>
+      	<a class="instagram-link" href="#"><span class="visually-hidden">Инстаграм</span></a> 
+      	<a class="facebook-link" href="#"><span class="visually-hidden">Фейсбук</span></a> 
+      	<a class="vk-link" href="#"><span class="visually-hidden">ВКонтакте</span></a> 
       </div>
       <nav class="footer-nav">
         <ul class="footer-nav-items">
@@ -203,9 +205,9 @@
       </nav>
       <div class="footer-logo">
         <a class="footer-htmlacademy" href="#">
-        	<img class="footer-logo-img" src="img/logo-htmlacademy-small.svg" width="128" height="39" alt="Логотип HTML Academy">
+        	<img class="footer-logo-img" src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy">
         </a> 
-        <span class="footer-htmlacademy-made">Сделано в <a class="footer-htmlacademy-link" href="#">HTML Academy</a> 2017</span>
+        <span class="footer-htmlacademy-made">Сделано в <a class="footer-htmlacademy-link" href="#">HTML Academy</a> &copy; 2017</span>
       </div>
     </footer>
     <!-- Модальное окно -->

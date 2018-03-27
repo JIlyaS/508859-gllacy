@@ -28,14 +28,14 @@
 				  	  <li class="menu-item"><a href="#">О Компании</a></li>	
 				  	</ul>
 			  	  <ul class="user-items">
-			  	  	<li class="user-item"><a class="visually-hidden" href="#">Поиск</a></li>
-			  	  	<li class="user-item"><a class="signin" href="#">Вход</a></li>
-			  	  	<li class="user-item"><a class="basket basket-current" href="#">2 товара</a></li>
+			  	  	<li class="user-item user-search"><a href="#"><span class="visually-hidden">Поиск</span></a></li>
+			  	  	<li class="user-item user-signin"><a class="signin" href="#">Вход</a></li>
+			  	  	<li class="user-item user-basket"><a class="basket basket-current" href="#">2 товара</a></li>
 			  	  </ul>
 				  </div>
 				</div>
 				<div class="user-info">
-		  	  <span class="work-hours">С 10 до 20, ежедневно</span>
+		  	  <span class="work-hours">С 10 до 20, ежедневно</span><br>
 		  	  <a class="work-phone" href="tel:88124502525">8 812 450-25-25</a>
 				</div>
 		  	<!-- Поиск -->
@@ -83,45 +83,83 @@
 			  <div class="breadcrumbs">
 			  	<ul class="breadcrumbs-items">
 			  	  <li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
+			  	  <li class="breadcrumbs-item">&raquo;</li>
 			  	  <li class="breadcrumbs-item"><a href="#">Каталог</a></li>
+			  	  <li class="breadcrumbs-item">&raquo;</li>
 			  	  <li class="breadcrumbs-item breadcrumbs-item-current">Сливочное</li>
 			  	</ul>
 			  </div>
 			  <h1 class="main-header">Сливочное мороженое</h1>
 			  <form class="sorted-menu" action="#" method="post">
-			  	<label class="menu-sort-label" for="menu-sort-items">Сортировка:</label>
-			  	<select class="menu-sort-items" id="menu-sort-items">
-			      <option class="menu-sort-item" value="popularity" selected>по популярности</option>
-			      <option class="menu-sort-item" value="name">сначала недорогие</option>
-			      <option class="menu-sort-item" value="price">сначала дорогие</option>
-			      <option class="menu-sort-item" value="price">по жирности</option>
-			  	</select>
-			  	<label class="menu-range-label">Цена: 100 руб. - 500 руб.</label>
-			  	<input class="menu-range" type="range" min="0" max="800" step="50">
-			  	<b class="menu-radio-label">Жирность:</b>
-			  	<div class="menu-radio-items">
-			  	  <input class="radio-item" id="radio-item1" type="radio" name="radio-item">
-			  	  <label class="menu-radio-label" for="radio-item1">0%</label>
-			  	  <input class="radio-item" id="radio-item2" type="radio" name="radio-item">
-			  	  <label class="menu-radio-label" for="radio-item2">до 10%</label>
-			  	  <input class="radio-item" id="radio-item3" type="radio" name="radio-item">
-			  	  <label class="menu-radio-label" for="radio-item3">до 30%</label>
-			  	  <input class="radio-item" id="radio-item4" type="radio" name="radio-item">
-			  	  <label class="menu-radio-label" for="radio-item4">выше 30%</label>
-			  	</div>
-			  	<b class="menu-checkbox-label">Наполнители:</b>
-			  	<div class="menu-checkbox-items">
-			  	  <input class="checkbox-item" id="checkbox-item1" type="checkbox"  name="checkbox-chocolade">
-			  	  <label class="" for="checkbox-item1">шоколадные</label>
-			  	  <input class="checkbox-item" id="checkbox-item2" type="checkbox" name="checkbox-sugar">
-			  	  <label class="checkbox-label-item" for="checkbox-item2">сахарные присыпки</label>
-			      <input class="checkbox-item" id="checkbox-item3" type="checkbox" name="checkbox-fruits">
-			  	  <label class="checkbox-label-item" for="checkbox-item3">фрукты</label>
-			  	  <input class="checkbox-item" id="checkbox-item4" type="checkbox" name="checkbox-syrup">
-			  	  <label class="checkbox-label-item" for="checkbox-item4">сиропы</label>
-			  	  <input class="checkbox-item" id="checkbox-item5" type="checkbox" name="checkbox-jams">
-			  	  <label class="checkbox-label-item" for="checkbox-item5">джемы</label>
-			  	</div>
+			  	<div class="menu-sort-block">
+				  	<label class="menu-sort-label" for="menu-sort-items">Сортировка:</label>
+				  	<select class="menu-sort-items" id="menu-sort-items">
+				      <option class="menu-sort-item" value="popularity" selected>по популярности</option>
+				      <option class="menu-sort-item" value="name">сначала недорогие</option>
+				      <option class="menu-sort-item" value="price">сначала дорогие</option>
+				      <option class="menu-sort-item" value="price">по жирности</option>
+				  	</select>
+				  </div>
+				  <div class="menu-range-block">
+				  	<div class="menu-price-controls">
+				  		<label class="menu-price-label">Цена:&nbsp;</label>
+				  		<label class="min-price"><input type="text" name="min-price" value="100"> руб. - </label>
+				  		<label class="max-price"><input type="text" name="max-price" value="500"> руб.</label>
+				  	</div>
+				  	<div class="menu-range-controls">
+				  		<div class="scale">
+				  			<div class="bar"></div>
+				  		</div>
+				  		<div class="range-toggle range-toggle-min"></div>
+				  		<div class="range-toggle range-toggle-max"></div>
+				  	</div>
+				  </div>
+				  <div class="menu-radio-block">
+				  	<b class="menu-radio-title">Жирность:</b>
+				  	<ul class="menu-radio-items">
+				  	  <li class="filter-option">
+				  	  	<input class="visually-hidden radio-item" id="radio-item1" type="radio" name="radio-item">
+				  	  	<label class="menu-radio-label" for="radio-item1">0%</label>
+				  	  </li>
+				  	  <li class="filter-option">
+					  	  <input class="visually-hidden radio-item" id="radio-item2" type="radio" name="radio-item" checked>
+					  	  <label class="menu-radio-label" for="radio-item2">до 10%</label>
+					  	</li>
+					  	<li class="filter-option">
+					  	  <input class="visually-hidden radio-item" id="radio-item3" type="radio" name="radio-item">
+					  	  <label class="menu-radio-label" for="radio-item3">до 30%</label>
+					  	</li>
+					  	<li class="filter-option">
+					  	  <input class="visually-hidden radio-item" id="radio-item4" type="radio" name="radio-item">
+					  	  <label class="menu-radio-label" for="radio-item4">выше 30%</label>
+					  	</li>
+				  	</ul>
+				  </div>
+				  <div class="menu-checkbox-block">
+				  	<b class="menu-checkbox-label">Наполнители:</b>
+				  	<div class="menu-checkbox-items">
+				  		<li class="filter-option">
+					  	  <input class="visually-hidden checkbox-item" id="checkbox-item1" type="checkbox"  name="checkbox-chocolade" checked>
+					  	  <label class="" for="checkbox-item1">шоколадные</label>
+					  	</li>
+					    <li class="filter-option">
+					  	  <input class="visually-hidden checkbox-item" id="checkbox-item2" type="checkbox" name="checkbox-sugar" checked>
+					  	  <label class="checkbox-label-item" for="checkbox-item2">сахарные присыпки</label>
+					  	</li>
+					  	<li class="filter-option">
+					      <input class="visually-hidden checkbox-item" id="checkbox-item3" type="checkbox" name="checkbox-fruits">
+					  	  <label class="checkbox-label-item" for="checkbox-item3">фрукты</label>
+					  	</li>
+					  	<li class="filter-option">
+					  	  <input class="visually-hidden checkbox-item" id="checkbox-item4" type="checkbox" name="checkbox-syrup">
+					  	  <label class="checkbox-label-item" for="checkbox-item4">сиропы</label>
+					  	</li>
+					  	<li class="filter-option">
+					  	  <input class="visually-hidden checkbox-item" id="checkbox-item5" type="checkbox" name="checkbox-jams">
+					  	  <label class="checkbox-label-item" for="checkbox-item5">джемы</label>
+					  	</li>
+				  	</div>
+				  </div>
 			  	<button class="menu-form-btn" type="submit">Применить</button>
 			  </form>
 		  </section>	
@@ -215,7 +253,7 @@
 				</article>
 			</section>
 		  <ul class="pagination-items">
-		  	<li class="pagination-item"><a href="#" class="arrow-left visually-hidden"></a></li>
+		  	<li class="pagination-item"><a href="#" class="arrow-left"></a></li>
 		    <li class="pagination-item pagination-item-current"><a>1</a></li>
 		    <li class="pagination-item"><a href="#">2</a></li>
 		    <li class="pagination-item"><a href="#">3</a></li>
@@ -225,27 +263,26 @@
 		  </ul>
 		</main>
 		<footer class="footer">
-		  <div class="footer-socials">
-		  	<a class="twitter-link visually-hidden" href="#">Твиттер</a>
-		  	<a class="instagram-link visually-hidden" href="#">Инстаграм</a>
-		  	<a class="facebook-link visually-hidden" href="#">Фейсбук</a>
-		  	<a class="vk-link visually-hidden" href="#">ВКонтакте</a>
-		  </div>
-		  <nav class="footer-nav">
-		    <ul class="footer-nav-items">
-		  	  <li class="footer-nav-item"><a href="#">Для поставщиков</a></li>
-		  	  <li class="footer-nav-item"><a href="#">Наши документы</a></li>
-		  	  <li class="footer-nav-item"><a href="#">О производстве</a></li>
-		  	  <li class="footer-nav-item"><a href="#">Экологические стандарты</a></li>
-		  	</ul>
-		  </nav>
-		  <div class="footer-logo">
-			  <a class="footer-htmlacademy" href="#">
-			  	<img class="footer-logo-img" src="img/logo-htmlacademy-small.svg" width="128" height="39" alt="Логотип HTML Academy">
-			  </a> 
-			  <span class="footer-htmlacademy-made">Сделано в <a class="footer-htmlacademy-link" href="#">HTML Academy</a> 2017</span>
-			</div>
-		</footer>
+      <div class="footer-socials">
+      	<a class="twitter-link" href="#"><span class="visually-hidden">Твиттер</span></a>
+      	<a class="instagram-link" href="#"><span class="visually-hidden">Инстаграм</span></a> 
+      	<a class="facebook-link" href="#"><span class="visually-hidden">Фейсбук</span></a> 
+      	<a class="vk-link" href="#"><span class="visually-hidden">ВКонтакте</span></a> 
+      </div>
+      <nav class="footer-nav">
+        <ul class="footer-nav-items">
+      	  <li class="footer-nav-item"><a href="#">Для поставщиков</a></li>
+      	  <li class="footer-nav-item"><a href="#">Наши документы</a></li>
+      	  <li class="footer-nav-item"><a href="#">О производстве</a></li>
+      	  <li class="footer-nav-item"><a href="#">Экологические стандарты</a></li>
+      	</ul>
+      </nav>
+      <div class="footer-logo">
+        <a class="footer-htmlacademy" href="#">
+        	<img class="footer-logo-img" src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy">
+        </a> 
+        <span class="footer-htmlacademy-made">Сделано в <a class="footer-htmlacademy-link" href="#">HTML Academy</a> &copy; 2017</span>
+      </div>
     <script src="#"></script>
   </body>
 </html>
