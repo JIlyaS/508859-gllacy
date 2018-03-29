@@ -11,14 +11,14 @@
       <nav class="nav">
         <div class="nav-wrapper">
           <div class="container">
-          	<a class="logo" href="#"><img class="logo-img" src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого Gllacy Shop"></a>
+          	<a class="logo"><img class="logo-img" src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого Gllacy Shop"></a>
           	<ul class="nav-items">
           	  <li class="menu-item">
-                <a href="catalog.html">Каталог</a>
+                <a href="#">Каталог</a>
                 <!-- Меню каталога -->
-                <ul class="menu-catalog visually-hidden">
+                <ul class="menu-catalog">
                   <li class="catalog-item"><a href="#">Новинки</a></li>
-                  <li class="catalog-item"><a href="#">Сливочное</a></li>
+                  <li class="catalog-item"><a href="catalog.html">Сливочное</a></li>
                   <li class="catalog-item"><a href="#">Щербеты</a></li>
                   <li class="catalog-item"><a href="#">Фруктовый лед</a></li>
                   <li class="catalog-item"><a href="#">Мелорин</a></li>
@@ -28,9 +28,37 @@
           	  <li class="menu-item"><a href="#">О Компании</a></li>	
           	</ul>
         	  <ul class="user-items">
-              <li class="user-item user-search"><a href="#"><span class="visually-hidden">Поиск</span></a></li>
-              <li class="user-item user-signin"><a href="#">Вход</a></li>
-              <li class="user-item user-basket"><a href="#">Пусто</a></li>
+              <li class="user-item user-search">
+                <a class="search-link" href="#">
+                  <span class="visually-hidden">Поиск</span>
+                </a>
+                <!-- Поиск -->
+                <div class="modal-search">
+                  <label class="visually-hidden" for="modal-find">Поиск</label>
+                  <input class="modal-find" id="modal-find" type="search" name="search-icecream" placeholder="Что ищем?">
+                </div>
+              </li>
+              <li class="user-item user-signin">
+                <a class="signin-link" href="#">Вход</a>
+                <!-- Авторизация и регистрация -->
+                <div class="modal-signup">
+                  <form action="https://echo.htmlacademy.ru" method="post">
+                    <label class="visually-hidden" for="modal-email">Электронная почта</label>
+                    <input class="modal-email" id="modal-email" type="text" name="signup-email" placeholder="Электронная почта">
+                    <label class="visually-hidden" for="modal-password">Пароль</label>
+                    <input class="modal-password" id="modal-password" type="password" name="signup-password" placeholder="Пароль">
+                    <button class="button modal-submit" type="submit">Войти</button>
+                    <div class="modal-links-block">
+                      <a class="modal-forgot-pass" href="#">Забыли пароль?</a>
+                      <a class="modal-registration" href="#">Новая регистрация</a>
+                    </div>
+                  </form>
+                </div>
+              </li>
+              <li class="user-item user-basket">
+                <a class="basket" href="#">Пусто</a>
+                <!-- Пустая корзина -->
+              </li>
             </ul>
           </div>
         </div>
@@ -38,24 +66,6 @@
           <span class="work-hours">С 10 до 20, ежедневно</span><br>
           <a href="tel:88124502525">8 812 450-25-25</a>
         </div>
-      	<!-- Поиск -->
-      	<div class="modal-search visually-hidden">
-          <label class="visually-hidden" for="modal-find">Поиск</label>
-      	  <input class="modal-find" id="modal-find" type="search" name="search-icecream" placeholder="Что ищем?">
-      	</div>
-      	<!-- Авторизация и регистрация -->
-        <div class="modal-signup visually-hidden">
-          <form action="#" method="post">
-            <label class="visually-hidden" for="modal-email">Электронная почта</label>
-            <input class="modal-email" id="modal-email" type="text" name="modal-email" placeholder="Электронная почта">
-            <label class="visually-hidden" for="modal-password">Пароль</label>
-            <input class="modal-password" id="modal-password" type="password" name="modal-password" placeholder="Пароль">
-            <button class="button modal-submit" type="submit" name="submit-btn">Войти</button>
-            <a class="modal-forgot-pass" href="#">Забыли пароль?</a>
-            <a class="modal-registration" href="#">Новая регистрация</a>
-          </form>
-        </div>
-      	<!-- Пустая корзина -->
       </nav>
     </header>
     <main class="main">
@@ -104,34 +114,34 @@
     	  <article class="product-item">
     	  	<img class="product-item-img" src="img/product-1.jpg" width="267" height="267" alt="Мороженое с апельсиновым джемом"> 
     	  	<span class="product-item-cost">310</span>
-          <span class="product-item-icon">&#8381;</span>
+          <!-- <span class="product-item-icon">&#8381;</span> -->
           <span class="product-item-weight">/кг</span>
     	  	<h2 class="product-item-title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h2>
-    	  	<a class="button product-item-view visually-hidden" href="#">Быстрый просмотр</a>
+    	  	<a class="button product-item-view" href="#">Быстрый просмотр</a>
     	  </article>
     	  <article class="product-item">
     	  	<img class="product-item-img" src="img/product-2.jpg" width="267" height="267" alt="Сливочно-кофейное мороженое">
           <span class="product-item-cost">380</span>
-          <span class="product-item-icon">&#8381;</span>
+          <!-- <span class="product-item-icon">&#8381;</span> -->
           <span class="product-item-weight">/кг</span>
     	  	<h2 class="product-item-title">Сливочно-кофейное с кусочками шоколада</h2>
-    	  	<a class="button product-item-view visually-hidden" href="#">Быстрый просмотр</a>
+    	  	<a class="button product-item-view" href="#">Быстрый просмотр</a>
     	  </article>
     	  <article class="product-item">
     	    <img class="product-item-img" src="img/product-3.jpg" width="267" height="267" alt="Сливочно-клубничное мороженое">
           <span class="product-item-cost">355</span>
-          <span class="product-item-icon">&#8381;</span>
+          <!-- <span class="product-item-icon">&#8381;</span> -->
           <span class="product-item-weight">/кг</span>
     	  	<h2 class="product-item-title">Сливочно-клубничное с присыпкой из белого шоколада</h2>
-    	  	<a class="button product-item-view visually-hidden" href="#">Быстрый просмотр</a>
+    	  	<a class="button product-item-view" href="#">Быстрый просмотр</a>
     	  </article>
     	  <article class="product-item">
       		<img class="product-item-img" src="img/product-4.jpg" width="267" height="267" alt="Сливочное крем-брюле">
           <span class="product-item-cost">415</span>
-          <span class="product-item-icon">&#8381;</span>
+          <!-- <span class="product-item-icon">&#8381;</span> -->
           <span class="product-item-weight">/кг</span>
     	  	<h2 class="product-item-title">Сливочное крем-брюле с карамельной подливкой</h2>
-    	  	<a class="button product-item-view visually-hidden" href="#">Быстрый просмотр</a>
+    	  	<a class="button product-item-view" href="#">Быстрый просмотр</a>
     	  </article>
       </section>
       <section class="aboutus">
@@ -190,10 +200,43 @@
     </main>
     <footer class="footer">
       <div class="footer-socials">
-      	<a class="twitter-link" href="#"><span class="visually-hidden">Твиттер</span></a>
-      	<a class="instagram-link" href="#"><span class="visually-hidden">Инстаграм</span></a> 
-      	<a class="facebook-link" href="#"><span class="visually-hidden">Фейсбук</span></a> 
-      	<a class="vk-link" href="#"><span class="visually-hidden">ВКонтакте</span></a> 
+      	<a class="twitter-link" href="#">
+          <span class="visually-hidden">Твиттер</span>
+          <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 32 32" viewBox="0 0 32 32" x="0px" y="0px" width="32" height="32" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:space="preserve" version="1.1">
+            <g id="Layer_1">
+            </g>
+            <g id="Layer_2">
+              <path fill="#e6ebe9" d="M 16 0 C 7.164 0 0 7.164 0 16 c 0 8.837 7.164 16 16 16 c 8.837 0 16 -7.163 16 -16 C 32 7.164 24.837 0 16 0 Z M 23.944 12.809 c -0.251 6.516 -3.463 10.832 -10.992 10.702 c -0.14 0 -0.205 0 -0.233 0 c -0.015 0 -0.021 0 -0.021 0 c -0.029 0 -0.094 0 -0.232 0 c -0.447 0 -4.543 -0.443 -5.344 -1.823 c 2.479 0.19 4.247 -0.406 5.12 -1.136 c -1.048 -0.289 -2.923 -0.461 -3.251 -2.848 c 0.384 0.104 0.618 0.221 1.299 0.113 c -1.307 -0.824 -2.758 -1.519 -2.679 -3.643 c 0.311 0.317 1.164 0.518 1.46 0.457 c -0.768 -0.233 -2.149 -3.244 -0.974 -4.781 c 1.984 1.79 4.075 3.482 7.804 3.643 c 0.227 -2.214 1.24 -3.699 3.168 -4.325 c 1.84 -0.479 3.255 0.26 3.901 1.138 c 0.737 -0.224 1.453 -0.466 2.193 -0.685 c -0.004 0.833 -0.569 1.463 -0.935 1.709 c 0.747 0.165 1.423 -0.475 1.423 -0.475 C 25.467 11.818 24.557 12.58 23.944 12.809 Z" />
+            </g>
+          </svg>
+        </a>
+      	<a class="instagram-link" href="#">
+          <span class="visually-hidden">Инстаграм</span>
+          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" enable-background="new 0 0 32 32" viewBox="0 0 32 32" x="0px" y="0px" width="32" height="32" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:space="preserve" version="1.1">
+            <g>
+              <path fill="#e6ebe9" d="M 20.916 16 c 0 2.728 -2.211 4.938 -4.938 4.938 S 11.039 18.728 11.039 16 c 0 -0.394 0.051 -0.773 0.138 -1.14 h -0.897 v 6.838 h 11.396 V 14.86 h -0.897 C 20.865 15.227 20.916 15.606 20.916 16 Z" />
+              <path fill="#e6ebe9" d="M 15.978 18.659 c 1.466 0 2.659 -1.193 2.659 -2.659 s -1.193 -2.659 -2.659 -2.659 c -1.466 0 -2.659 1.193 -2.659 2.659 S 14.511 18.659 15.978 18.659 Z" />
+              <rect fill="#e6ebe9" x="18.637" y="10.302" width="3.039" height="3.039" />
+              <path fill="#e6ebe9" d="M 16 0 C 7.164 0 0 7.164 0 16 c 0 8.837 7.164 16 16 16 c 8.837 0 16 -7.163 16 -16 C 32 7.164 24.837 0 16 0 Z M 23.955 21.698 c 0 1.254 -1.025 2.279 -2.279 2.279 H 10.279 C 9.026 23.978 8 22.952 8 21.698 V 10.302 c 0 -1.253 1.026 -2.279 2.279 -2.279 h 11.396 c 1.254 0 2.279 1.026 2.279 2.279 V 21.698 Z" />
+            </g>
+          </svg>
+        </a> 
+      	<a class="facebook-link" href="#">
+          <span class="visually-hidden">Фейсбук</span>
+          <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" enable-background="new 0 0 32 32" viewBox="0 0 32 32" x="0px" y="0px" width="32" height="32" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:space="preserve" version="1.1">
+            <path fill="#e6ebe9" d="M 16 0 C 7.164 0 0 7.163 0 16 s 7.164 16 16 16 c 8.837 0 16 -7.164 16 -16 S 24.837 0 16 0 Z M 20.062 9.455 h -3.021 v 3.444 h 3.021 v 3.445 h -3.021 v 8.61 h -3.021 v -8.61 H 11 v -3.445 h 3.021 V 9.455 c 0 -1.902 1.353 -3.445 3.021 -3.445 h 3.021 V 9.455 Z" />
+          </svg>
+        </a> 
+      	<a class="vk-link" href="#">
+          <span class="visually-hidden">ВКонтакте</span>
+           <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" enable-background="new 0 0 32 32" viewBox="0 0 32 32" x="0px" y="0px" width="32" height="32" xmlns:xml="http://www.w3.org/XML/1998/namespace" xml:space="preserve" version="1.1">
+            <g>
+              <path fill="#e6ebe9" d="M 16.637 14.495 c 0.402 -0.019 0.719 -0.082 0.951 -0.188 c 0.326 -0.145 0.54 -0.33 0.641 -0.559 c 0.101 -0.229 0.15 -0.496 0.15 -0.797 c 0 -0.232 -0.058 -0.465 -0.174 -0.697 c -0.116 -0.232 -0.322 -0.405 -0.617 -0.517 c -0.264 -0.1 -0.592 -0.155 -0.984 -0.165 c -0.392 -0.009 -0.943 -0.014 -1.652 -0.014 h -0.339 v 2.965 h 0.565 C 15.749 14.523 16.235 14.514 16.637 14.495 Z" />
+              <path fill="#e6ebe9" d="M 18.118 17.084 c -0.282 -0.081 -0.672 -0.125 -1.166 -0.132 c -0.494 -0.006 -1.012 -0.009 -1.55 -0.009 h -0.79 v 3.493 h 0.264 c 1.014 0 1.74 -0.003 2.18 -0.009 c 0.438 -0.007 0.843 -0.088 1.212 -0.245 c 0.377 -0.157 0.633 -0.364 0.774 -0.625 s 0.214 -0.562 0.214 -0.9 c 0 -0.446 -0.088 -0.788 -0.261 -1.03 C 18.825 17.386 18.531 17.204 18.118 17.084 Z" />
+              <path fill="#e6ebe9" d="M 16 0 C 7.164 0 0 7.164 0 16 c 0 8.837 7.164 16 16 16 c 8.837 0 16 -7.163 16 -16 C 32 7.164 24.837 0 16 0 Z M 22.602 20.531 c -0.273 0.533 -0.646 0.976 -1.124 1.327 c -0.552 0.415 -1.161 0.71 -1.823 0.886 s -1.501 0.264 -2.519 0.264 h -6.121 V 8.987 h 5.443 c 1.13 0 1.957 0.038 2.48 0.113 c 0.524 0.076 1.045 0.242 1.561 0.5 c 0.533 0.27 0.929 0.632 1.189 1.087 c 0.26 0.455 0.392 0.975 0.392 1.558 c 0 0.678 -0.179 1.278 -0.536 1.795 c -0.358 0.518 -0.863 0.92 -1.517 1.208 v 0.075 c 0.917 0.182 1.642 0.559 2.179 1.13 c 0.537 0.571 0.807 1.325 0.807 2.261 C 23.013 19.392 22.875 19.997 22.602 20.531 Z" />
+            </g>
+          </svg>
+        </a> 
       </div>
       <nav class="footer-nav">
         <ul class="footer-nav-items">
@@ -204,23 +247,26 @@
       	</ul>
       </nav>
       <div class="footer-logo">
-        <a class="footer-htmlacademy" href="#">
+        <a class="footer-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">
         	<img class="footer-logo-img" src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy">
         </a> 
-        <span class="footer-htmlacademy-made">Сделано в <a class="footer-htmlacademy-link" href="#">HTML Academy</a> &copy; 2017</span>
+        <span class="footer-htmlacademy-made">Сделано в <a class="footer-htmlacademy-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017</span>
       </div>
     </footer>
     <!-- Модальное окно -->
-    <section class="modal-feedback visually-hidden">
+    <section class="modal-feedback">
       <h2 class="visually-hidden">Обратная связь</h2>
+      <button class="modal-feedback-close" type="button"><span class="visually-hidden">Закрыть</span></button>
       <b class="modal-feedback-title">Мы обязательно вам ответим!</b>
-      <label class="visually-hidden" for="modal-feedback-name">Ваше имя</label>
-      <input class="modal-feedback-name" id="modal-feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?" required>
-      <label class="visually-hidden" for="modal-feedback-email">Ваша почта</label>
-      <input class="modal-feedback-email" id="modal-feedback-email" type="text" name="feedback-email" placeholder="Ваша почта для ответа?" required>
-      <label class="visually-hidden" for="modal-feedback-quiestion">Ваш вопрос</label>
-      <textarea class="modal-feedback-quiestion" id="modal-feedback-quiestion" name="feedback-question" placeholder="Напишите что-нибудь..." required></textarea>
-      <button class="button modal-feedback-submit" type="submit">Отправить</button>
+      <form class="modal-feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="visually-hidden" for="modal-feedback-name">Ваше имя</label>
+        <input class="modal-feedback-name" id="modal-feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?" required>
+        <label class="visually-hidden" for="modal-feedback-email">Ваша почта</label>
+        <input class="modal-feedback-email" id="modal-feedback-email" type="text" name="feedback-email" placeholder="Ваша почта для ответа?" required>
+        <label class="visually-hidden" for="modal-feedback-quiestion">Ваш вопрос</label>
+        <textarea class="modal-feedback-quiestion" id="modal-feedback-quiestion" name="feedback-question" placeholder="Напишите что-нибудь..." required></textarea>
+        <button class="button modal-feedback-submit" type="submit">Отправить</button>
+      </form>
     </section>
     <script src="#"></script>
   </body>
