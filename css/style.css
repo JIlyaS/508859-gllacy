@@ -25,7 +25,7 @@
     src: 
          local('Roboto Bold'), local('Roboto-Bold'),
          url('../fonts/Roboto Bold.woff2') format('woff2'),
-		 url('../fonts/Roboto Bold.woff') format('woff');
+         url('../fonts/Roboto Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
@@ -71,7 +71,9 @@ input[type="radio"].visually-hidden {
 
     white-space: nowrap;
 
-    clip-path: inset(100%);
+    -webkit-clip-path: inset(100%);
+
+            clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
@@ -95,27 +97,44 @@ input[type="radio"].visually-hidden {
     color: #ffffff;
     
     background: #f26843;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f26843), to(#e74a35));
+    background: -webkit-linear-gradient(top, #f26843, #e74a35);
+    background: -o-linear-gradient(top, #f26843, #e74a35);
     background: linear-gradient(to bottom, #f26843, #e74a35);
     border-radius: 50px;
-    box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64); 
+    -webkit-box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+            box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64); 
     border: none;
 
     cursor: pointer;
 }
 
 .button:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f58669), to(#ec6f5e));
+  background: -webkit-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
+  background: -o-linear-gradient(top, #f58669 0%, #ec6f5e 100%);
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+  -webkit-box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+          box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .button:active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#d84732), to(#e1613e));
+  background: -webkit-linear-gradient(top, #d84732 0%, #e1613e 100%);
+  background: -o-linear-gradient(top, #d84732 0%, #e1613e 100%);
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+  -webkit-box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+          box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     min-height: 125px;
     margin-top: 10px;
 
@@ -134,6 +153,8 @@ input[type="radio"].visually-hidden {
 }
 
 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 1146px;
     margin: 0 auto;
@@ -155,8 +176,11 @@ input[type="radio"].visually-hidden {
 }
 
 .nav-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     width: 698px;
     min-height: 125px;
@@ -223,7 +247,8 @@ input[type="radio"].visually-hidden {
 
 .menu-item > a:active {
     background-color: #ededed;
-    box-shadow: inset 0 2px 1px 0 #696969;
+    -webkit-box-shadow: inset 0 2px 1px 0 #696969;
+            box-shadow: inset 0 2px 1px 0 #696969;
 
     border: none;
     text-decoration: none;
@@ -267,7 +292,9 @@ input[type="radio"].visually-hidden {
 
     border-radius: 6px;
 
-    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+
+            box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .catalog-item a {
@@ -344,9 +371,14 @@ input[type="radio"].visually-hidden {
 
 /* Пользовательское меню */
 .user-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
     width: 267px;
     min-height: 67px;
@@ -437,9 +469,9 @@ input[type="radio"].visually-hidden {
 }
 
 /* Не работает адекватно */
-.user-search a:hover ~ .modal-search,
-.user-search a:focus ~ .modal-search, 
-.user-search a:active ~ .modal-search {
+.user-search:hover .modal-search,
+.user-search:focus .modal-search, 
+.user-search:active .modal-search {
     display: block;
 }
 
@@ -473,9 +505,9 @@ input[type="radio"].visually-hidden {
 }
 
 /* Не работает адекватно */
-.user-signin a:hover ~ .modal-signup,
-.user-signin a:focus ~ .modal-signup, 
-.user-signin a:active ~ .modal-signup {
+.user-signin:hover .modal-signup,
+.user-signin:focus .modal-signup, 
+.user-signin:active .modal-signup {
     display: block;
 }
 
@@ -545,7 +577,8 @@ input[type="radio"].visually-hidden {
 
     background-color: #f8f7f4;
     color: #323232;
-    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+            box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .modal-search {
@@ -571,7 +604,9 @@ input[type="radio"].visually-hidden {
     border: 1px solid #d3d3d2;
     border-radius: 5px;
 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+            box-sizing: border-box;
 }
 
 .modal-find:hover {
@@ -610,7 +645,9 @@ input[type="radio"].visually-hidden {
     border: 1px solid #d3d3d2;
     border-radius: 5px;
 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+            box-sizing: border-box;
 }
 
 .modal-email:hover, 
@@ -697,20 +734,6 @@ input[type="radio"].visually-hidden {
 
 /* Слайдер */
 .slider {
-    position: relative;
-    top: -135px;
-    z-index: 1;
-
-    background-color: #849d8f;
-    background-image: url("../img/slider-img-1.png");
-    background-repeat: no-repeat;
-    background-position: center top;
-
-
-    /*Временно для сетки*/
-    min-width: 1146px;
-    padding: 0 27px;
-    height: 881px;
 }
 
 .slider-container {
@@ -718,6 +741,8 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-items {
+    position: relative;
+
     margin: 0;
     padding: 0;
 
@@ -725,8 +750,10 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-title {
+    position: relative;
+    top: 390px;
+
     display: block;
-    margin-top: 0;
     margin-bottom: 32px;
 
     font-family: "Roboto Bold", Arial, sans-serif;
@@ -740,16 +767,56 @@ input[type="radio"].visually-hidden {
     text-align: center;
 }
 
-/*.slider-item {
+.slider-item {
+    position: relative;
+    top: -585px; /*-135px*/
+    z-index: 1;
+    
+    display: none;
+    min-width: 1146px;
+    padding: 0 27px;
+    height: 881px;
+
+    opacity: 0;
+    transition: 1s cubic-bezier(0.4, 0, 1, 1);
+}  
+
+.slider-item-1 {
+    background: url("../img/slider-img-1.png");
     background-color: #849d8f;
     background-repeat: no-repeat;
-} */
+    background-position: center top;
+}
+
+.slider-item-2 {
+    background: url("../img/slider-img-2.png");
+    background-color: #849d8f;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.slider-item-3 {
+    background: url("../img/slider-img-3.png");
+    background-color: #849d8f;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.slider-item-current {
+    display: block;
+
+    opacity: 1;
+    transition: 1s cubic-bezier(0.4, 0, 1, 1);
+}
 
 .slider-btn-wrapper {
     width: 100%;
 }
 
 .slider-btn {
+    position: relative;
+    top: 390px;
+
     display: block;
     width: 280px;
     min-height: 63px;
@@ -770,7 +837,9 @@ input[type="radio"].visually-hidden {
 
 .slider-next-wrapper {
     position: relative;
-    top: -48px;
+    top: -910px; /* -48px */
+    left: 27px;
+    z-index: 1;
 }
 
 .slider-next {
@@ -791,8 +860,7 @@ input[type="radio"].visually-hidden {
     background-color: #ffffff;
 }
 
-.slider-next:hover,
-.slider-next:focus {
+.slider-next:hover {
     background-color: #b2c1b7;
 }
 
@@ -802,11 +870,16 @@ input[type="radio"].visually-hidden {
 
 /* Раздел Баннеры */
 .choise-ice {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 1146px;
     min-height: 231px;
-    margin-top: -369px;
+    /*margin-top: -369px;*/
+    margin-top: -846px;
     margin-bottom: 40px;
     margin-left: 27px;
     margin-right: 27px;
@@ -826,7 +899,9 @@ input[type="radio"].visually-hidden {
 
     border-radius: 16px;
 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+            box-sizing: border-box;
 }
 
 .choise-element-1 {
@@ -901,13 +976,23 @@ input[type="radio"].visually-hidden {
 
 /* Раздел Хиты */
 .product-container-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    -webkit-box-pack: flex-start;
+        -ms-flex-pack: flex-start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     width: 100%;
     min-height: 325px;
     margin-bottom: 80px;
+    margin-left: 13px;
+
+    -webkit-box-sizing: border-box;
+
+            box-sizing: border-box;
 }
 
 .product-item {
@@ -923,31 +1008,13 @@ input[type="radio"].visually-hidden {
     
     border-radius: 5px;
 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+            box-sizing: border-box;
 }
 
-/*Костыль*/
-.product-item:nth-child(1),
-.product-item:nth-child(2),
-.product-item:nth-child(3),
-.product-item:nth-child(4) {
-    z-index: 30;
-}
-
-/*Костыль*/
-.product-item:nth-child(5),
-.product-item:nth-child(6),
-.product-item:nth-child(7),
-.product-item:nth-child(8) {
-    z-index: 20;
-}
-
-/*Костыль*/
-.product-item:nth-child(9),
-.product-item:nth-child(10),
-.product-item:nth-child(11),
-.product-item:nth-child(12) {
-    z-index: 10;
+.product-item:hover {
+    z-index: 2;
 }
 
 .product-item::before {
@@ -1064,9 +1131,15 @@ input[type="radio"].visually-hidden {
 /* О сайте */
 .aboutus {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     
     min-height: 278px;
     margin-left: 27px;
@@ -1158,8 +1231,12 @@ input[type="radio"].visually-hidden {
 
 /* Новости */
 .news-substraction-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-left: 27px;
     margin-right: 27px;
     margin-bottom: 40px;
@@ -1221,7 +1298,8 @@ input[type="radio"].visually-hidden {
     background-color: #92cdff;
     background-image: -webkit-repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 6px, #92cdff 6px, #92cdff 12px, #f8f7f4 12px, #f8f7f4 18px, #fe9e90 18px, #fe9e90 24px); 
     background-image: -o-repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 6px, #92cdff 6px, #92cdff 12px, #f8f7f4 12px, #f8f7f4 18px, #fe9e90 18px, #fe9e90 24px); 
-    background-image: -moz-repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 6px, #92cdff 6px, #92cdff 12px, #f8f7f4 12px, #f8f7f4 18px, #fe9e90 18px, #fe9e90 24px); 
+    background-image: -webkit-repeating-linear-gradient(135deg, #f8f7f4 0px, #f8f7f4 6px, #92cdff 6px, #92cdff 12px, #f8f7f4 12px, #f8f7f4 18px, #fe9e90 18px, #fe9e90 24px); 
+    background-image: -o-repeating-linear-gradient(135deg, #f8f7f4 0px, #f8f7f4 6px, #92cdff 6px, #92cdff 12px, #f8f7f4 12px, #f8f7f4 18px, #fe9e90 18px, #fe9e90 24px); 
     background-image: repeating-linear-gradient(-45deg, #f8f7f4 0px, #f8f7f4 6px, #92cdff 6px, #92cdff 12px, #f8f7f4 12px, #f8f7f4 18px, #fe9e90 18px, #fe9e90 24px);
     
     border-radius: 15px;
@@ -1267,7 +1345,8 @@ input[type="radio"].visually-hidden {
 
     border: 1px solid #d3d3d2;
     border-radius: 5px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .substraction-email:hover {
@@ -1298,6 +1377,11 @@ input[type="radio"].visually-hidden {
     background-repeat: no-repeat;
 }
 
+.card iframe {
+    position: absolute;
+    z-index: 1;
+}
+
 .icecream-img {
     position: relative;
     top: 139px;
@@ -1308,6 +1392,7 @@ input[type="radio"].visually-hidden {
     position: absolute;
     right: 0;
     top: 62px;
+    z-index: 2;
 
     width: 300px;
     min-height: 305px;
@@ -1378,17 +1463,28 @@ input[type="radio"].visually-hidden {
 
 /* Подвал */
 .footer {
+    position: relative;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     min-height: 103px;
     margin-left: 27px;
     margin-right: 27px;
 }
 
 .footer-socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
 
     position: relative;
     width: 267px;
@@ -1396,9 +1492,15 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-socials > a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
     margin-top: 36px;
     margin-right: 10px;
@@ -1432,9 +1534,14 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-nav-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
     margin: 0;
     padding: 0;
@@ -1501,11 +1608,19 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
 }
 
 .footer-htmlacademy {
@@ -1579,7 +1694,33 @@ input[type="radio"].visually-hidden {
 
     border-radius: 10px;
 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+@keyframes bounce {
+    0%   { transform: translateY(-2000px); }
+    50%  { transform: translateY(30px);    }
+    90%  { transform: translateY(-10px);   }
+    100% { transform: translateY(0);       }
+}
+
+.modal-show {
+    display: block;
+
+    animation-name: bounce;
+    animation-duration: 1s;
+}
+
+@keyframes shake {
+    0%, 100%                { transform: translateX(0);     }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80%      { transform: translateX(10px);  } 
+}
+
+.modal-error {
+    animation-name: shake;
+    animation-duration: 0.6s;
 }
 
 .modal-feedback-close {
@@ -1612,11 +1753,15 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-feedback-close::before {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 .modal-feedback-close::after {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
 
 .modal-feedback-title {
@@ -1645,7 +1790,8 @@ input[type="radio"].visually-hidden {
     border: 1px solid #d3d3d2;
     border-radius: 5px;
 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .modal-feedback-form > input {
@@ -1681,6 +1827,23 @@ input[type="radio"].visually-hidden {
     min-height: 44px;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: none;
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 4;
+}
+
+.overlay-show {
+    display: block;
+}
+
 /* Каталог */
 .catalog-page {
     min-height: 1650px;
@@ -1700,8 +1863,9 @@ input[type="radio"].visually-hidden {
     color: #323232;
 }
 
-.basket:hover ~ .modal-basket,
-.basket:focus ~ .modal-basket {
+.user-basket:hover .modal-basket,
+.user-basket:focus .modal-basket,
+.user-basket:active .modal-basket {
     display: block;
 }
 
@@ -1717,11 +1881,14 @@ input[type="radio"].visually-hidden {
     height: 243px;
 
     background-color: #f8f7f4;
-    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+            box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 
     border-radius: 5px;
 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+            box-sizing: border-box;
 }
 
 .modal-product-items {
@@ -1812,11 +1979,15 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-basket-close::before {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 .modal-basket-close::after {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
 
 .modal-title, 
@@ -1905,9 +2076,16 @@ input[type="radio"].visually-hidden {
     left: -1px;
     z-index: 3;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
 
     width: 267px;
@@ -1916,6 +2094,8 @@ input[type="radio"].visually-hidden {
 }
 
 .breadcrumbs-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0;
     padding: 0;
@@ -1976,10 +2156,16 @@ input[type="radio"].visually-hidden {
 }
 
 .sorted-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    align-content: flex-start;
-    flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
     width: 879px;
     min-height: 200px;
@@ -1990,8 +2176,13 @@ input[type="radio"].visually-hidden {
 .menu-range-block,
 .menu-radio-block,
 .menu-checkbox-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .menu-sort-items,
@@ -2157,7 +2348,9 @@ input[type="radio"].visually-hidden {
 
     border-radius: 50px;
 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+            box-sizing: border-box;
 }
 
 .menu-range-controls .scale {
@@ -2218,8 +2411,12 @@ input[type="radio"].visually-hidden {
 }
 
 .menu-radio-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: stretch;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
 
     position: relative;
     top: 9px;
@@ -2249,7 +2446,9 @@ input[type="radio"].visually-hidden {
 
     border: 4px solid rgba(255, 255, 255, 0.8);
 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+            box-sizing: border-box;
 }
 
 .radio-item:checked + label::after {
@@ -2271,7 +2470,10 @@ input[type="radio"].visually-hidden {
     position: relative;
 
     cursor: pointer;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 /* Костыль */
@@ -2292,8 +2494,12 @@ input[type="radio"].visually-hidden {
 }
 
 .menu-checkbox-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: stretch;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
 
     position: relative;
     top: 9px;
@@ -2339,7 +2545,8 @@ input[type="radio"].visually-hidden {
     background-position: 0 0;
     background-size: 20px 20px;
 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .checkbox-item:checked + label::before {
@@ -2369,7 +2576,9 @@ input[type="radio"].visually-hidden {
     border: none;
     border: 2px solid #fcfcfc;
     border-radius: 35px;
-    box-sizing: border-box;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .menu-form-btn:hover, 
@@ -2386,7 +2595,8 @@ input[type="radio"].visually-hidden {
     
     border: none;
 
-    box-shadow: inset 0 1px 2px 0 #696969;
+    -webkit-box-shadow: inset 0 1px 2px 0 #696969;
+            box-shadow: inset 0 1px 2px 0 #696969;
 }
 
 /* Товары каталога */
@@ -2403,12 +2613,14 @@ input[type="radio"].visually-hidden {
     margin-bottom: -43px;
 }
 
-
-
 /* Пагинация */
 .pagination-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 
     position: relative;
     top: -40px;
@@ -2438,7 +2650,9 @@ input[type="radio"].visually-hidden {
 
     border-radius: 50%;
 
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+            box-sizing: border-box;
 }
 
 .pagination-item-current a {
@@ -2477,8 +2691,6 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/arrow-left.png");
     background-repeat: no-repeat;
     background-position: 0 0;
-
-    /*transform: rotate(180deg);*/
 }
 
 .arrow-right::after {
@@ -2502,7 +2714,7 @@ input[type="radio"].visually-hidden {
     content: "";
 
     position: absolute;
-    top: 1542px;
+    bottom: 104px;
 
     width: 1146px;
     height: 1px;
@@ -2513,4 +2725,5 @@ input[type="radio"].visually-hidden {
 .catalog-page .footer {
     margin-top: -13px;
 }
+
 
