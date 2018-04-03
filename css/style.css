@@ -739,9 +739,6 @@ input[type="radio"].visually-hidden {
 /* Главный контент */
 
 /* Слайдер */
-.slider {
-}
-
 .slider-container {
     padding-top: 390px;
 }
@@ -779,34 +776,33 @@ input[type="radio"].visually-hidden {
     z-index: 1;
     
     display: none;
-    min-width: 1146px;
+    width: 1146px;
     padding: 0 27px;
     height: 881px;
+
+    background-color: #849d8f;
+    background-repeat: no-repeat;
+    background-position: center top;
 }  
 
 .slider-item-1 {
     background: url("../img/slider-img-1.png");
-    background-color: #849d8f;
-    background-repeat: no-repeat;
-    background-position: center top;
 }
 
 .slider-item-2 {
     background: url("../img/slider-img-2.png");
-    background-color: #849d8f;
-    background-repeat: no-repeat;
-    background-position: center top;
 }
 
 .slider-item-3 {
     background: url("../img/slider-img-3.png");
-    background-color: #849d8f;
-    background-repeat: no-repeat;
-    background-position: center top;
 }
 
 .slider-item-current {
     display: block;
+
+    background-color: #849d8f;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 .slider-btn-wrapper {
@@ -838,8 +834,12 @@ input[type="radio"].visually-hidden {
 .slider-next-wrapper {
     position: relative;
     top: -910px; /* -48px */
-    left: 27px;
     z-index: 1;
+
+    padding-left: 27px;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .slider-next {
@@ -988,7 +988,7 @@ input[type="radio"].visually-hidden {
     width: 100%;
     min-height: 325px;
     margin-bottom: 80px;
-    margin-left: 13px;
+    padding-left: 13px;
 
     -webkit-box-sizing: border-box;
 
@@ -2470,88 +2470,48 @@ input[type="radio"].visually-hidden {
     content: "";
     position: absolute;
     left: -32px;
-    top: -1px;
 
     width: 22px;
     height: 22px;
 
-    border-radius: 50%;
+    background-image: url("../img/radio-off.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+
+    opacity: 0.8;
+
+    /*border-radius: 50%;
     border: 4px solid rgba(255, 255, 255, 0.8);
 
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-}
-
-.radio-item:hover + label::before,
-.radio-item:focus + label::before,
-.radio-item:active + label::before {
-    border-color: rgba(255, 255, 255, 1);
-}
-
-.radio-item:checked + label::after,
-.radio-item:checked + label::after,
-.radio-item:checked + label::after {
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.radio-item:checked:hover + label::after,
-.radio-item:checked:focus + label::after,
-.radio-item:checked:active + label::after {
-    background-color: rgba(255, 255, 255, 1);
+            box-sizing: border-box;*/
 }
 
 .radio-item:checked + label::before {
-    border-color: rgba(255, 255, 255, 0.8);
+    background-image: url("../img/radio-on.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
+
+    opacity: 0.8;
 }
 
-.radio-item:checked:hover + label::before,
-.radio-item:checked:focus + label::before,
-.radio-item:checked:active + label::before {
-    border-color: rgba(255, 255, 255, 1);
+.radio-item + label:hover::before,
+.radio-item:checked + label:hover::before {
+    opacity: 1;
 }
 
-.radio-item:disabled + label::before {
-    border-color: rgba(255, 255, 255, 0.4);
+.radio-item:focus + label:before {
+    opacity: 1;
 }
 
-
-.radio-item:checked + label::after {
-    content: "";
-
-    position: absolute;
-    left: -25px;
-    top: 6px;
-
-    width: 8px;
-    height: 8px;
-    
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;    
+.radio-item:disabled + label,
+.radio-item:disabled + label::before,
+.radio-item:disabled:checked + label,
+.radio-item:disabled:checked + label::before {
+    opacity: 0.4;
 }
-
-.radio-item:disabled:checked + label::after {
-    content: "";
-
-    position: absolute;
-    left: -25px;
-    top: 6px;
-
-    width: 8px;
-    height: 8px;
-    
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
-}
-
-.radio-item:disabled + label {
-    color: rgba(255, 255, 255, 0.4);
-}
-
-.radio-item:disabled + label::after {
-    border-color: rgba(255, 255, 255, 0.4);
-}
-
-
 
 .menu-radio-label {
     position: relative;
@@ -2576,7 +2536,7 @@ input[type="radio"].visually-hidden {
 
 .menu-checkbox-label {
     position: relative;
-    top: 3px;
+    top: 2px;
     left: 45px;
 }
 
@@ -2620,48 +2580,53 @@ input[type="radio"].visually-hidden {
 .checkbox-item + label::before {
     content: "";
     position: absolute;
-    top: 9px;
+    top: 8px;
     
-    width: 20px;
+    width: 23px;
     height: 20px;
     margin-left: -30px;
 
-    border-radius: 2px;
     background-image: url("../img/checkbox-off.png");
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: 20px 20px;
+    background-size: contain;
 
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 
+    opacity: 0.8;
+}
+
+.checkbox-item + label,
+.checkbox-item + label::before {
     cursor: pointer;
 }
 
 .checkbox-item:checked + label::before {
-    content: "";
+    background-image: url("../img/checkbox-on.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: contain;
 
-    position: absolute;
-    top: 9px;
-
-    width: 23px;
-    height: 20px;
-    
-    background: url("../img/checkbox-on.png");
+    opacity: 0.8;
 }
 
-/*.checkbox-item:disabled + label::after{
-    content: "";
+.checkbox-item + label:hover::before,
+.checkbox-item:checked + label:hover::before {
+    opacity: 1;
+}
 
-    position: absolute;
-    top: 9px;
-    z-index: 1;
+.checkbox-item:focus + label::before {
+    opacity: 1;
+}
 
-    width: 23px;
-    height: 20px;
-    
-    background: url("../img/checkbox-off-disabled.png");
-}*/
+.checkbox-item:disabled + label,
+.checkbox-item:disabled + label::before,
+.checkbox-item:disabled:checked + label,
+.checkbox-item:disabled:checked + label::before {
+    opacity: 0.4;
+}
+
 
 
 .menu-form-btn {
@@ -2828,5 +2793,6 @@ input[type="radio"].visually-hidden {
 .catalog-page .footer {
     margin-top: -9px;
 }
+
 
 
